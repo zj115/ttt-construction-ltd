@@ -106,7 +106,7 @@ export default function Contact() {
               </label>
               <button
                 type="submit"
-                className="mt-2 inline-flex w-full items-center justify-center bg-[#b87943] px-7 py-4 font-semibold text-white shadow-[0_18px_42px_rgba(184,121,67,0.24)] transition hover:bg-[#2f4a39] sm:w-fit"
+                className="liquid-glass mt-2 inline-flex w-full items-center justify-center px-8 py-4 font-semibold text-[#243126] transition hover:-translate-y-1 sm:w-fit"
               >
                 Send Enquiry
               </button>

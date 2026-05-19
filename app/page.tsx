@@ -3,12 +3,14 @@ import Contact from "@/components/Contact";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import HomeBuildScope from "@/components/HomeBuildScope";
 import Navbar from "@/components/Navbar";
 import Process from "@/components/Process";
 import Projects from "@/components/Projects";
 import ResidentialBuilds from "@/components/ResidentialBuilds";
 import Services from "@/components/Services";
 import SiteMotion from "@/components/SiteMotion";
+import Testimonials from "@/components/Testimonials";
 import WhyChooseUs from "@/components/WhyChooseUs";
 
 export default function Home() {
@@ -19,10 +21,12 @@ export default function Home() {
         <Hero />
         <About />
         <Services />
+        <HomeBuildScope />
         <ResidentialBuilds />
         <Projects />
         <Process />
         <WhyChooseUs />
+        <Testimonials />
         <FAQ />
         <Contact />
         <Footer />

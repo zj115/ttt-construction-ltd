@@ -45,7 +45,7 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="hidden border border-[#b87943]/35 bg-[#b87943] px-5 py-3 text-sm font-semibold text-white shadow-[0_16px_35px_rgba(184,121,67,0.2)] transition hover:border-[#2f4a39]/40 hover:bg-[#2f4a39] lg:inline-flex"
+          className="liquid-glass hidden px-5 py-3 text-sm font-semibold text-[#243126] transition hover:-translate-y-0.5 lg:inline-flex"
         >
           Get a Quote
         </a>

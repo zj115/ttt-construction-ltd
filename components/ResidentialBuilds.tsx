@@ -117,7 +117,7 @@ export default function ResidentialBuilds() {
                 </div>
                 <a
                   href="#contact"
-                  className="inline-flex justify-center bg-[#b87943] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#2f4a39]"
+                  className="liquid-glass inline-flex justify-center px-5 py-3 text-sm font-bold text-[#243126] transition hover:-translate-y-1"
                 >
                   Plan a Home Build
                 </a>

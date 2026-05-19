@@ -66,7 +66,7 @@ select {
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(138, 90, 49, 0.2);
-  border-radius: 6px;
+  border-radius: 999px;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.16)),
     rgba(255, 250, 241, 0.36);
@@ -75,6 +75,7 @@ select {
     inset 0 -1px 1px rgba(138, 90, 49, 0.1),
     0 18px 42px rgba(95, 73, 44, 0.16);
   backdrop-filter: blur(14px);
+  isolation: isolate;
 }
 
 .liquid-glass::before {
@@ -89,6 +90,39 @@ select {
   mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   mask-composite: exclude;
   pointer-events: none;
+}
+
+.liquid-glass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.72), transparent 32%);
+  opacity: 0.75;
+  transition: opacity 260ms ease, transform 260ms ease;
+}
+
+.liquid-glass:hover::after {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.liquid-panel {
+  border-radius: 24px;
+}
+
+.soft-card {
+  border: 1px solid rgba(110, 90, 66, 0.12);
+  background: rgba(255, 250, 241, 0.78);
+  box-shadow: 0 18px 45px rgba(95, 73, 44, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.warm-band {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(143, 165, 141, 0.16), transparent 26rem),
+    radial-gradient(circle at 88% 20%, rgba(184, 121, 67, 0.12), transparent 24rem),
+    rgba(255, 250, 241, 0.5);
 }
 
 .grid-bg {

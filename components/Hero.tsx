@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, House, ShieldCheck } from "lucide-react";
+import { ArrowRight, Hammer, House, ShieldCheck } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -27,6 +27,24 @@ export default function Hero() {
         animate={{ backgroundPosition: ["0px 0px", "54px 54px"] }}
         transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
       />
+      <motion.div
+        aria-hidden="true"
+        className="absolute right-[8%] top-32 hidden rounded-full border border-white/30 bg-white/30 px-5 py-3 text-sm font-semibold text-[#243126] shadow-[0_18px_45px_rgba(95,73,44,0.12)] backdrop-blur-xl lg:block"
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: [0, -10, 0] }}
+        transition={{ opacity: { duration: 0.7, delay: 1.1 }, y: { duration: 5, repeat: Infinity, ease: "easeInOut" } }}
+      >
+        Warm homes. Clear builds.
+      </motion.div>
+      <motion.div
+        aria-hidden="true"
+        className="absolute bottom-28 right-[16%] hidden rounded-full border border-white/30 bg-white/24 px-5 py-3 text-sm font-semibold text-[#243126] shadow-[0_18px_45px_rgba(95,73,44,0.12)] backdrop-blur-xl xl:block"
+        initial={{ opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: [0, 12, 0] }}
+        transition={{ opacity: { duration: 0.7, delay: 1.3 }, y: { duration: 5.8, repeat: Infinity, ease: "easeInOut" } }}
+      >
+        Built around New Zealand living.
+      </motion.div>
 
       <div className="section-shell relative flex min-h-[calc(100vh-7rem)] items-center py-16">
         <div className="max-w-4xl">
@@ -64,14 +82,14 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="liquid-glass group inline-flex items-center justify-center gap-3 px-7 py-4 font-semibold text-[#243126] transition hover:-translate-y-0.5 hover:text-[#111812]"
+              className="liquid-glass group inline-flex items-center justify-center gap-3 px-8 py-4 font-semibold text-[#243126] transition hover:-translate-y-1 hover:text-[#111812]"
             >
               Get a Quote
               <ArrowRight className="transition group-hover:translate-x-1" size={18} />
             </a>
             <a
               href="#services"
-              className="liquid-glass inline-flex items-center justify-center px-7 py-4 font-semibold text-[#243126] transition hover:-translate-y-0.5"
+              className="liquid-glass inline-flex items-center justify-center px-8 py-4 font-semibold text-[#243126] transition hover:-translate-y-1"
             >
               View Services
             </a>
@@ -83,16 +101,29 @@ export default function Hero() {
             transition={{ duration: 0.75, delay: 1 }}
             className="mt-10 grid max-w-2xl gap-3 sm:grid-cols-2"
           >
-            <div className="liquid-glass p-4">
+            <motion.div whileHover={{ y: -6, scale: 1.01 }} className="liquid-glass liquid-panel p-4">
               <House className="mb-3 text-[#8a5a31]" size={23} />
               <p className="font-display text-lg font-semibold text-[#243126]">Detached Homes</p>
               <p className="mt-1 text-sm text-[#5f675b]">New builds, extensions, and renovations.</p>
-            </div>
-            <div className="liquid-glass p-4">
+            </motion.div>
+            <motion.div whileHover={{ y: -6, scale: 1.01 }} className="liquid-glass liquid-panel p-4">
               <ShieldCheck className="mb-3 text-[#8a5a31]" size={23} />
               <p className="font-display text-lg font-semibold text-[#243126]">Reliable Handover</p>
               <p className="mt-1 text-sm text-[#5f675b]">Clear communication and quality checks.</p>
-            </div>
+            </motion.div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, delay: 1.15 }}
+            className="mt-5 flex flex-wrap gap-3 text-sm font-medium text-[#4f594d]"
+          >
+            {["Concept advice", "Fixed-scope quoting", "Trade coordination", "Quality checks"].map((item) => (
+              <span key={item} className="inline-flex items-center gap-2 rounded-full bg-[#fffaf1]/68 px-4 py-2 shadow-[0_10px_24px_rgba(95,73,44,0.08)] backdrop-blur">
+                <Hammer size={15} className="text-[#8a5a31]" />
+                {item}
+              </span>
+            ))}
           </motion.div>
         </div>
       </div>
