@@ -1,0 +1,50 @@
+import type { Metadata } from "next";
+import { Inter, Space_Grotesk } from "next/font/google";
+import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap"
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap"
+});
+
+export const metadata: Metadata = {
+  title: "TTT Construction Ltd | Professional Construction Services in New Zealand",
+  description:
+    "Professional construction, renovation, and project management services by TTT Construction Ltd in New Zealand.",
+  keywords: [
+    "TTT Construction Ltd",
+    "New Zealand construction",
+    "renovation",
+    "project management",
+    "residential construction",
+    "commercial construction"
+  ],
+  openGraph: {
+    title: "TTT Construction Ltd | Professional Construction Services in New Zealand",
+    description:
+      "Reliable construction, renovation, and project management services across New Zealand.",
+    type: "website",
+    locale: "en_NZ"
+  }
+};
+
+export default function RootLayout({
+  children
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en-NZ">
+      <body className={`${inter.variable} ${spaceGrotesk.variable}`}>
+        {children}
+      </body>
+    </html>
+  );
+}
