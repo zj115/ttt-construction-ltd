@@ -21,6 +21,11 @@ const faqs = [
     question: "Can you help with consent and drawings?",
     answer:
       "We can discuss consent requirements, drawings, and buildability during the consultation. Where specialist design or engineering input is needed, that can be coordinated with the right professionals."
+  },
+  {
+    question: "What happens after handover?",
+    answer:
+      "The handover process can include final quality checks, workmanship expectations, maintenance notes, and aftercare follow-up for agreed items."
   }
 ];
 

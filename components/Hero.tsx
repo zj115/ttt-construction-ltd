@@ -65,7 +65,7 @@ export default function Hero() {
             transition={{ duration: 0.85, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
             className="font-serif-display text-5xl font-normal leading-[1.02] text-[#243126] sm:text-6xl lg:text-7xl"
           >
-            Building the Future with <span className="text-gradient">Precision and Trust</span>
+            Residential New Builds, Renovations & <span className="text-gradient">Extensions in New Zealand</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 28 }}
@@ -73,9 +73,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-7 max-w-2xl text-lg leading-8 text-[#5f675b] sm:text-xl"
           >
-            Licensed residential building and renovation support for New Zealand homeowners.
-            TTT Construction Ltd delivers reliable new builds, renovations, extensions, and
-            project management.
+            TTT Construction Ltd supports homeowners with reliable construction planning, clear
+            communication, quality workmanship, and residential project management.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 18 }}

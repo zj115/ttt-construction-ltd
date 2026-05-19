@@ -7,7 +7,7 @@ import SectionHeading from "@/components/SectionHeading";
 const fields = [
   { label: "Name", type: "text", name: "name", placeholder: "Your name" },
   { label: "Email", type: "email", name: "email", placeholder: "you@example.com" },
-  { label: "Phone", type: "tel", name: "phone", placeholder: "+64 ..." },
+  { label: "Phone", type: "tel", name: "phone", placeholder: "021 506 106" },
   { label: "Site Address / Suburb", type: "text", name: "siteAddress", placeholder: "Suburb or site address" }
 ];
 
@@ -21,6 +21,8 @@ const projectTypes = [
 ];
 
 const budgetRanges = ["Under $100k", "$100k - $250k", "$250k - $500k", "$500k+", "Not sure yet"];
+
+const projectStages = ["Idea / early planning", "Drawings in progress", "Ready for quote", "Consent stage", "Ready to start"];
 
 const yesNoOptions = ["Yes", "No", "Not sure yet"];
 
@@ -71,7 +73,7 @@ export default function Contact() {
                   </select>
                 </label>
                 <label className="grid gap-2 text-sm font-medium text-[#4f594d]">
-                  Estimated Budget
+                  Budget Range
                   <select
                     name="budget"
                     defaultValue=""
@@ -90,6 +92,23 @@ export default function Contact() {
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="grid gap-2 text-sm font-medium text-[#4f594d]">
+                  Project Stage
+                  <select
+                    name="projectStage"
+                    defaultValue=""
+                    className="liquid-field px-4 py-3 text-[#243126] outline-none transition"
+                  >
+                    <option value="" disabled>
+                      Select project stage
+                    </option>
+                    {projectStages.map((stage) => (
+                      <option key={stage} value={stage}>
+                        {stage}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="grid gap-2 text-sm font-medium text-[#4f594d]">
                   Do you already have drawings?
                   <select
                     name="hasDrawings"
@@ -106,8 +125,10 @@ export default function Contact() {
                     ))}
                   </select>
                 </label>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2">
                 <label className="grid gap-2 text-sm font-medium text-[#4f594d]">
-                  Do you need consent support?
+                  Council consent needed?
                   <select
                     name="consentSupport"
                     defaultValue=""
@@ -123,16 +144,16 @@ export default function Contact() {
                     ))}
                   </select>
                 </label>
+                <label className="grid gap-2 text-sm font-medium text-[#4f594d]">
+                  Preferred Start Date
+                  <input
+                    name="timeline"
+                    type="text"
+                    className="liquid-field px-4 py-3 text-[#243126] outline-none transition placeholder:text-[#9b8469]"
+                    placeholder="ASAP, 3-6 months, after consent..."
+                  />
+                </label>
               </div>
-              <label className="grid gap-2 text-sm font-medium text-[#4f594d]">
-                Preferred Start Date
-                <input
-                  name="timeline"
-                  type="text"
-                  className="liquid-field px-4 py-3 text-[#243126] outline-none transition placeholder:text-[#9b8469]"
-                  placeholder="ASAP, 3-6 months, planning stage..."
-                />
-              </label>
               <label className="grid gap-2 text-sm font-medium text-[#4f594d]">
                 Message
                 <textarea
@@ -178,16 +199,16 @@ export default function Contact() {
                   <Phone className="mt-1 shrink-0 text-[#8a5a31]" size={21} />
                   <div>
                     <p className="font-semibold text-[#243126]">Phone</p>
-                    <a className="mt-1 block hover:text-[#2f4a39]" href="tel:+64000000000">
-                      +64 XX XXX XXXX
+                    <a className="mt-1 block hover:text-[#2f4a39]" href="tel:+6421506106">
+                      021 506 106
                     </a>
                   </div>
                 </div>
               </div>
               <div className="mt-10 border-t border-[#6e5a42]/12 pt-6">
                 <p className="text-sm leading-7 text-[#646b60]">
-                  Standalone homes / Extensions / Renovations / Residential project management for
-                  homeowners and developers across New Zealand.
+                  Residential new builds, renovations, extensions, and project management for
+                  homeowners across New Zealand, with Waikato enquiries welcome.
                 </p>
               </div>
             </aside>

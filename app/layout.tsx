@@ -22,9 +22,9 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "TTT Construction Ltd | Professional Construction Services in New Zealand",
+  title: "TTT Construction Ltd | Residential Builders in New Zealand",
   description:
-    "Professional construction, renovation, and project management services by TTT Construction Ltd in New Zealand.",
+    "Residential new builds, renovations, extensions, and project management services by TTT Construction Ltd in New Zealand.",
   keywords: [
     "TTT Construction Ltd",
     "New Zealand construction",
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     "detached homes"
   ],
   openGraph: {
-    title: "TTT Construction Ltd | Professional Construction Services in New Zealand",
+    title: "TTT Construction Ltd | Residential Builders in New Zealand",
     description:
-      "Reliable construction, renovation, and project management services across New Zealand.",
+      "Reliable residential new build, renovation, extension, and project management services across New Zealand.",
     type: "website",
     locale: "en_NZ"
   }

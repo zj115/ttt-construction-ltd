@@ -14,12 +14,12 @@ export default function Footer() {
         <div>
           <h2 className="font-display text-2xl font-semibold text-[#243126]">TTT Construction Ltd</h2>
           <p className="mt-4 max-w-md leading-7 text-[#646b60]">
-            Residential construction, renovation, and project management support across New Zealand.
+            Residential new builds, renovations, extensions, and project management support across New Zealand.
           </p>
           <div className="mt-5 grid gap-2 text-sm text-[#646b60]">
             <span>Email: info@tttconstruction.co.nz</span>
-            <span>Phone: +64 XX XXX XXXX</span>
-            <span>NZBN: To be confirmed</span>
+            <span>Phone: 021 506 106</span>
+            <span>Location: New Zealand</span>
           </div>
         </div>
         <div>
@@ -58,7 +58,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="mt-5 text-sm leading-6 text-[#7a6c5a]">
-            Service areas: Auckland, Hamilton, Tauranga, Wellington, Christchurch, and regional NZ by discussion.
+            Service areas: Waikato and wider New Zealand by project discussion.
           </p>
         </div>
       </div>

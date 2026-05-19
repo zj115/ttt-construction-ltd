@@ -5,43 +5,32 @@ import {
   BadgeCheck,
   ClipboardCheck,
   HardHat,
-  HeartHandshake,
   ShieldCheck,
-  Wrench
+  ReceiptText
 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 
 const trustItems = [
   {
-    title: "LBP coordination",
-    text: "Licensed Building Practitioner support can be coordinated where restricted building work requires it.",
+    title: "NZ Building Code",
+    text: "Residential work is planned around New Zealand Building Code, consent, inspection, and practical handover expectations.",
     icon: BadgeCheck
   },
   {
-    title: "Workmanship guarantee",
-    text: "Clear workmanship expectations, defect follow-up, and a practical handover process.",
-    icon: ShieldCheck
-  },
-  {
-    title: "NZ Building Code aware",
-    text: "Residential work is planned around New Zealand consent, code, and inspection expectations.",
-    icon: ClipboardCheck
-  },
-  {
-    title: "Health & safety focused",
-    text: "Site conduct, trade coordination, and daily work habits are treated as part of professional delivery.",
+    title: "Health & Safety",
+    text: "Site access, trade coordination, tidy work habits, and risk awareness are treated as part of daily delivery.",
     icon: HardHat
   },
   {
-    title: "Aftercare support",
-    text: "Post-handover questions, minor adjustments, and maintenance guidance can be discussed clearly.",
-    icon: HeartHandshake
+    title: "Transparent Quoting",
+    text: "Quotes are discussed around scope, drawings, site conditions, exclusions, and realistic timing before work begins.",
+    icon: ReceiptText
   },
   {
-    title: "Insurance ready",
-    text: "Public liability and project-specific cover can be confirmed during quotation where applicable.",
-    icon: Wrench
+    title: "Workmanship Guarantee",
+    text: "Clear workmanship expectations, defect follow-up, aftercare support, and warranty discussions are part of the handover process.",
+    icon: ShieldCheck
   }
 ];
 
@@ -49,14 +38,14 @@ export default function TrustBar() {
   return (
     <section className="py-20 sm:py-28">
       <div className="section-shell">
-        <SectionHeading eyebrow="Trust & Compliance" title="Built Around Confidence, Not Guesswork">
+        <SectionHeading eyebrow="Trust & Compliance" title="Licensed. Insured. Built to NZ Standards.">
           <p>
-            Mature building companies do more than look good online. They explain standards,
-            responsibilities, warranties, safety, and what happens after handover.
+            Professional residential construction depends on clear responsibility, compliant work,
+            documented scope, safe site habits, and a handover process clients can understand.
           </p>
         </SectionHeading>
 
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {trustItems.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -76,8 +65,8 @@ export default function TrustBar() {
 
         <Reveal className="soft-card mt-8 flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-2xl leading-7 text-[#4f594d]">
-            Need a clearer answer on consent, drawings, scope, warranty, or insurance? Start with a
-            free consultation and we will tell you what information is needed before pricing.
+            LBP involvement, public liability insurance, project-specific warranty details, and
+            documentation can be confirmed during consultation and quotation where applicable.
           </p>
           <a href="#contact" className="liquid-glass inline-flex justify-center px-6 py-3 font-semibold text-[#243126]">
             Request a Free Consultation

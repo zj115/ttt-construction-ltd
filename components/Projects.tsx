@@ -5,37 +5,37 @@ import SectionHeading from "@/components/SectionHeading";
 
 const projects = [
   {
-    name: "Example Capability: New Detached Home",
+    name: "New Detached Home Capability",
     projectType: "New detached home",
-    scope: "Full residential construction coordination",
-    location: "Auckland, NZ",
-    timeline: "Approx. 6-9 months depending on consent and site readiness",
-    keyWork: ["Foundations and framing", "Envelope and exterior cladding", "Interior finishing", "Handover quality checks"],
+    scope: "Residential construction coordination from site readiness through handover",
+    location: "Waikato / wider NZ by consultation",
+    timeline: "Indicative 6-9 months depending on consent, ground conditions, and selections",
+    keyWork: ["Set-out and foundations", "Framing and roof structure", "Cladding coordination", "Final quality checks"],
     image: "/images/modern-detached-home.jpg"
   },
   {
-    name: "Example Capability: Family Home Upgrade",
+    name: "Renovation & Extension Capability",
     projectType: "Renovation and extension",
-    scope: "Layout improvement, new living spaces, interior finishing",
-    location: "Wellington, NZ",
-    timeline: "Approx. 10-18 weeks depending on scope and materials",
-    keyWork: ["Demolition and preparation", "Structural opening coordination", "Kitchen and living upgrades", "Finish detailing"],
+    scope: "Layout changes, added living space, interior finishing, and staged work around the existing home",
+    location: "New Zealand residential sites",
+    timeline: "Indicative 10-18 weeks depending on scope, access, and materials",
+    keyWork: ["Site protection", "Demolition and preparation", "Structural coordination", "Finish detailing"],
     image: "/images/luxury-suburban-home.jpg"
   },
   {
-    name: "Example Capability: Lifestyle Section Home",
-    projectType: "Rural / lifestyle residential build",
-    scope: "Standalone home construction for open or lifestyle sites",
-    location: "Christchurch, NZ",
-    timeline: "Approx. 7-10 months depending on access, services, and weather",
-    keyWork: ["Site access planning", "Residential framing", "Weatherproofing", "Practical exterior works"],
+    name: "Lifestyle Section Build Capability",
+    projectType: "Lifestyle residential build",
+    scope: "Standalone home construction planning for rural, lifestyle, or larger residential sites",
+    location: "Waikato and regional NZ by discussion",
+    timeline: "Indicative 7-10 months depending on access, services, weather, and inspections",
+    keyWork: ["Site access review", "Materials staging", "Weatherproofing", "Exterior works"],
     image: "/images/rural-single-family-home.jpg"
   },
   {
-    name: "Example Capability: Construction Stage Support",
+    name: "Construction Stage Support",
     projectType: "Project management and site delivery",
     scope: "Trade coordination, materials staging, and progress communication",
-    location: "Hamilton, NZ",
+    location: "Residential projects across NZ by consultation",
     timeline: "Stage-based support aligned with the construction programme",
     keyWork: ["Trade sequencing", "Progress updates", "Materials coordination", "Quality review"],
     image: "/images/residential-construction-site.jpg"
@@ -46,10 +46,10 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24 sm:py-32">
       <div className="section-shell">
-        <SectionHeading eyebrow="Example Capabilities" title="Project Information Written Like a Real Quote Brief">
+        <SectionHeading eyebrow="Project Capability" title="Clear Residential Scope Before Construction Starts">
           <p>
-            These are example capability profiles, not claims about completed client projects. They
-            show the kind of residential scope, timing, and work breakdown clients can expect to discuss.
+            Until verified completed projects are ready to publish, these capability profiles show
+            how TTT Construction Ltd discusses scope, location, timing, and key work with homeowners.
           </p>
         </SectionHeading>
 
@@ -89,7 +89,7 @@ export default function Projects() {
                   </div>
                   <div className="mt-5">
                     <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#8a5a31]">
-                      Key work completed
+                      Key work included
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {project.keyWork.map((item) => (
