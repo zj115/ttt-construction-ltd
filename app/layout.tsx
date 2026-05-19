@@ -31,7 +31,8 @@ export const metadata: Metadata = {
     "renovation",
     "project management",
     "residential construction",
-    "commercial construction"
+    "home extensions",
+    "detached homes"
   ],
   openGraph: {
     title: "TTT Construction Ltd | Professional Construction Services in New Zealand",

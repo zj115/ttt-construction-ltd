@@ -1,4 +1,14 @@
-import { BadgeCheck, Clock3, Gem, MessageSquareText, ReceiptText, Users } from "lucide-react";
+import {
+  BadgeCheck,
+  ClipboardCheck,
+  Clock3,
+  Gem,
+  HeartHandshake,
+  MessageSquareText,
+  ReceiptText,
+  ShieldCheck,
+  Users
+} from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 
@@ -8,7 +18,10 @@ const reasons = [
   { title: "Reliable timeline", icon: Clock3 },
   { title: "Skilled team", icon: Users },
   { title: "Quality materials", icon: Gem },
-  { title: "Transparent pricing", icon: ReceiptText }
+  { title: "Transparent pricing", icon: ReceiptText },
+  { title: "Workmanship guarantee", icon: ShieldCheck },
+  { title: "Consent-aware planning", icon: ClipboardCheck },
+  { title: "Aftercare support", icon: HeartHandshake }
 ];
 
 export default function WhyChooseUs() {
@@ -37,6 +50,11 @@ export default function WhyChooseUs() {
             );
           })}
         </div>
+        <Reveal className="mt-9 text-center">
+          <a href="#contact" className="liquid-glass inline-flex px-7 py-4 font-semibold text-[#243126]">
+            Discuss Your Project
+          </a>
+        </Reveal>
       </div>
     </section>
   );

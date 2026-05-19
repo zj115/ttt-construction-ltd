@@ -5,31 +5,39 @@ import SectionHeading from "@/components/SectionHeading";
 
 const projects = [
   {
-    name: "Modern Residential Build",
-    category: "New Detached Home",
+    name: "Example Capability: New Detached Home",
+    projectType: "New detached home",
+    scope: "Full residential construction coordination",
     location: "Auckland, NZ",
-    text: "A full standalone home build focused on structure, light, street appeal, and long-term liveability.",
+    timeline: "Approx. 6-9 months depending on consent and site readiness",
+    keyWork: ["Foundations and framing", "Envelope and exterior cladding", "Interior finishing", "Handover quality checks"],
     image: "/images/modern-detached-home.jpg"
   },
   {
-    name: "Premium Family Home",
-    category: "Residential Build",
+    name: "Example Capability: Family Home Upgrade",
+    projectType: "Renovation and extension",
+    scope: "Layout improvement, new living spaces, interior finishing",
     location: "Wellington, NZ",
-    text: "A refined two-storey home concept with strong exterior detailing and clean residential finishes.",
+    timeline: "Approx. 10-18 weeks depending on scope and materials",
+    keyWork: ["Demolition and preparation", "Structural opening coordination", "Kitchen and living upgrades", "Finish detailing"],
     image: "/images/luxury-suburban-home.jpg"
   },
   {
-    name: "Rural Single-Family Home",
-    category: "Standalone House",
+    name: "Example Capability: Lifestyle Section Home",
+    projectType: "Rural / lifestyle residential build",
+    scope: "Standalone home construction for open or lifestyle sites",
     location: "Christchurch, NZ",
-    text: "A practical standalone home build for lifestyle sections, rural settings, and resilient everyday use.",
+    timeline: "Approx. 7-10 months depending on access, services, and weather",
+    keyWork: ["Site access planning", "Residential framing", "Weatherproofing", "Practical exterior works"],
     image: "/images/rural-single-family-home.jpg"
   },
   {
-    name: "Residential Construction Site",
-    category: "New Build Stage",
+    name: "Example Capability: Construction Stage Support",
+    projectType: "Project management and site delivery",
+    scope: "Trade coordination, materials staging, and progress communication",
     location: "Hamilton, NZ",
-    text: "Framing, site coordination, materials staging, and construction control for a new residential project.",
+    timeline: "Stage-based support aligned with the construction programme",
+    keyWork: ["Trade sequencing", "Progress updates", "Materials coordination", "Quality review"],
     image: "/images/residential-construction-site.jpg"
   }
 ];
@@ -38,10 +46,10 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24 sm:py-32">
       <div className="section-shell">
-        <SectionHeading eyebrow="Projects" title="Standalone Home Project Capabilities">
+        <SectionHeading eyebrow="Example Capabilities" title="Project Information Written Like a Real Quote Brief">
           <p>
-            Residential project examples showing the type of standalone homes, new build stages,
-            and renovation-led improvement work TTT Construction Ltd can support across New Zealand.
+            These are example capability profiles, not claims about completed client projects. They
+            show the kind of residential scope, timing, and work breakdown clients can expect to discuss.
           </p>
         </SectionHeading>
 
@@ -65,17 +73,42 @@ export default function Projects() {
                 </div>
                 <div className="p-6">
                   <div className="mb-4 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#8a5a31]">
-                    <span>{project.category}</span>
+                    <span>{project.projectType}</span>
                     <span className="text-[#9b8469]">/</span>
                     <span>{project.location}</span>
                   </div>
                   <h3 className="font-display text-2xl font-semibold text-[#243126]">{project.name}</h3>
-                  <p className="mt-3 leading-7 text-[#646b60]">{project.text}</p>
+                  <div className="mt-5 grid gap-3 text-sm text-[#4f594d]">
+                    <p>
+                      <span className="font-semibold text-[#243126]">Scope:</span> {project.scope}
+                    </p>
+                    <p>
+                      <span className="font-semibold text-[#243126]">Estimated timeline:</span>{" "}
+                      {project.timeline}
+                    </p>
+                  </div>
+                  <div className="mt-5">
+                    <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#8a5a31]">
+                      Key work completed
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.keyWork.map((item) => (
+                        <span key={item} className="rounded-full bg-[#efe4d4]/70 px-3 py-2 text-xs font-medium text-[#4f594d]">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </article>
             </Reveal>
           ))}
         </div>
+        <Reveal className="mt-9 text-center">
+          <a href="#contact" className="liquid-glass inline-flex px-7 py-4 font-semibold text-[#243126]">
+            Discuss Your Project
+          </a>
+        </Reveal>
       </div>
     </section>
   );

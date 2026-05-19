@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Hammer, House, ShieldCheck } from "lucide-react";
 
+const heroServices = ["New Builds", "Renovations", "Extensions", "Project Management"];
+
 export default function Hero() {
   return (
     <section id="home" className="noise relative min-h-screen overflow-hidden pt-28">
@@ -71,9 +73,22 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-7 max-w-2xl text-lg leading-8 text-[#5f675b] sm:text-xl"
           >
-            TTT Construction Ltd delivers reliable construction, renovation, and project
-            management services across New Zealand.
+            Licensed residential building and renovation support for New Zealand homeowners.
+            TTT Construction Ltd delivers reliable new builds, renovations, extensions, and
+            project management.
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, delay: 0.72 }}
+            className="mt-5 flex flex-wrap gap-3 text-sm font-semibold text-[#2f4a39]"
+          >
+            {heroServices.map((service) => (
+              <span key={service} className="rounded-full bg-[#fffaf1]/72 px-4 py-2 shadow-[0_10px_24px_rgba(95,73,44,0.08)] backdrop-blur">
+                {service}
+              </span>
+            ))}
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}

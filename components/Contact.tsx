@@ -8,7 +8,7 @@ const fields = [
   { label: "Name", type: "text", name: "name", placeholder: "Your name" },
   { label: "Email", type: "email", name: "email", placeholder: "you@example.com" },
   { label: "Phone", type: "tel", name: "phone", placeholder: "+64 ..." },
-  { label: "Location", type: "text", name: "location", placeholder: "City / suburb" }
+  { label: "Site Address / Suburb", type: "text", name: "siteAddress", placeholder: "Suburb or site address" }
 ];
 
 const projectTypes = [
@@ -21,6 +21,8 @@ const projectTypes = [
 ];
 
 const budgetRanges = ["Under $100k", "$100k - $250k", "$250k - $500k", "$500k+", "Not sure yet"];
+
+const yesNoOptions = ["Yes", "No", "Not sure yet"];
 
 export default function Contact() {
   return (
@@ -86,8 +88,44 @@ export default function Contact() {
                   </select>
                 </label>
               </div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <label className="grid gap-2 text-sm font-medium text-[#4f594d]">
+                  Do you already have drawings?
+                  <select
+                    name="hasDrawings"
+                    defaultValue=""
+                    className="border border-[#6e5a42]/14 bg-white/72 px-4 py-3 text-[#243126] outline-none transition focus:border-[#8fa58d]"
+                  >
+                    <option value="" disabled>
+                      Select an option
+                    </option>
+                    {yesNoOptions.map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="grid gap-2 text-sm font-medium text-[#4f594d]">
+                  Do you need consent support?
+                  <select
+                    name="consentSupport"
+                    defaultValue=""
+                    className="border border-[#6e5a42]/14 bg-white/72 px-4 py-3 text-[#243126] outline-none transition focus:border-[#8fa58d]"
+                  >
+                    <option value="" disabled>
+                      Select an option
+                    </option>
+                    {yesNoOptions.map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              </div>
               <label className="grid gap-2 text-sm font-medium text-[#4f594d]">
-                Preferred Timeline
+                Preferred Start Date
                 <input
                   name="timeline"
                   type="text"

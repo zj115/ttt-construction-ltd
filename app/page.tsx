@@ -11,6 +11,7 @@ import ResidentialBuilds from "@/components/ResidentialBuilds";
 import Services from "@/components/Services";
 import SiteMotion from "@/components/SiteMotion";
 import Testimonials from "@/components/Testimonials";
+import TrustBar from "@/components/TrustBar";
 import WhyChooseUs from "@/components/WhyChooseUs";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
         <Hero />
         <About />
         <Services />
+        <TrustBar />
         <HomeBuildScope />
         <ResidentialBuilds />
         <Projects />

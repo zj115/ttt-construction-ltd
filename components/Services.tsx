@@ -47,7 +47,7 @@ export default function Services() {
     <section id="services" className="relative overflow-hidden py-24 sm:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(143,165,141,0.18),transparent_34rem)]" />
       <div className="section-shell relative">
-        <SectionHeading eyebrow="Services" title="Residential Construction Services Built for New Zealand">
+        <SectionHeading eyebrow="Services" title="Residential Construction & Renovation in New Zealand">
           <p>
             From new standalone homes to extensions, finishing, and repairs, TTT Construction Ltd
             brings structured delivery and professional care to residential projects.
@@ -73,6 +73,11 @@ export default function Services() {
             );
           })}
         </div>
+        <Reveal className="mt-9 text-center">
+          <a href="#contact" className="liquid-glass inline-flex px-7 py-4 font-semibold text-[#243126]">
+            Request a Free Consultation
+          </a>
+        </Reveal>
       </div>
     </section>
   );

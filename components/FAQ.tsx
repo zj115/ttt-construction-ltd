@@ -5,7 +5,7 @@ const faqs = [
   {
     question: "Do you work on standalone house builds?",
     answer:
-      "Yes. The site now focuses strongly on detached residential homes, including new builds, extensions, renovations, and finishing work."
+      "Yes. TTT Construction Ltd focuses on residential construction and renovation, including detached homes, extensions, renovations, and finishing work."
   },
   {
     question: "Can you help before construction starts?",
@@ -13,14 +13,14 @@ const faqs = [
       "Yes. TTT Construction Ltd can support early consultation, scope review, build planning, quotations, and practical sequencing."
   },
   {
-    question: "Is the enquiry form connected to a backend?",
+    question: "How do I request a quote?",
     answer:
-      "The current form is frontend-only, which is suitable for a launch version. It can later connect to Vercel Forms, email, CRM, or a custom API."
+      "Send your project type, site suburb, drawings status, approximate budget, and preferred start date. We will review the information and confirm the next step."
   },
   {
-    question: "Can the project be deployed directly from GitHub?",
+    question: "Can you help with consent and drawings?",
     answer:
-      "Yes. The repository is Vercel-ready with Next.js, TypeScript, Tailwind CSS, image assets, and a production build configuration."
+      "We can discuss consent requirements, drawings, and buildability during the consultation. Where specialist design or engineering input is needed, that can be coordinated with the right professionals."
   }
 ];
 
@@ -28,7 +28,7 @@ export default function FAQ() {
   return (
     <section className="py-24 sm:py-32">
       <div className="section-shell">
-        <SectionHeading eyebrow="FAQ" title="Everything Ready for a Residential Construction Launch" />
+        <SectionHeading eyebrow="FAQ" title="Common Questions Before You Start Building" />
         <div className="grid gap-4 md:grid-cols-2">
           {faqs.map((item, index) => (
             <Reveal key={item.question} delay={index * 0.05}>
