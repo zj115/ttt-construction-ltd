@@ -45,7 +45,7 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="relative overflow-hidden py-24 sm:py-32">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(33,168,255,0.12),transparent_34rem)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(143,165,141,0.18),transparent_34rem)]" />
       <div className="section-shell relative">
         <SectionHeading eyebrow="Services" title="Residential Construction Services Built for New Zealand">
           <p>
@@ -59,15 +59,15 @@ export default function Services() {
             const Icon = service.icon;
             return (
               <Reveal key={service.title} delay={index * 0.05}>
-                <div className="glow-border group h-full border border-white/10 bg-[#0b1118]/84 p-6 transition duration-300 hover:-translate-y-2 hover:border-[#21a8ff]/45">
+                <div className="glow-border group h-full border border-[#6e5a42]/12 bg-[#fffaf1]/82 p-6 shadow-[0_18px_45px_rgba(95,73,44,0.08)] transition duration-300 hover:-translate-y-2 hover:border-[#8fa58d] hover:bg-white">
                   <div className="mb-8 flex items-center justify-between">
-                    <span className="grid h-14 w-14 place-items-center border border-white/12 bg-white/[0.06] text-[#67c7ff] transition group-hover:border-[#21a8ff]/50 group-hover:shadow-[0_0_30px_rgba(33,168,255,0.18)]">
+                    <span className="grid h-14 w-14 place-items-center border border-[#8fa58d]/40 bg-[#8fa58d]/16 text-[#2f4a39] transition group-hover:border-[#b87943]/50 group-hover:shadow-[0_18px_30px_rgba(184,121,67,0.14)]">
                       <Icon size={25} />
                     </span>
-                    <span className="font-display text-sm text-slate-500">0{index + 1}</span>
+                    <span className="font-display text-sm text-[#9b8469]">0{index + 1}</span>
                   </div>
-                  <h3 className="font-display text-xl font-semibold text-white">{service.title}</h3>
-                  <p className="mt-4 leading-7 text-slate-300">{service.text}</p>
+                  <h3 className="font-display text-xl font-semibold text-[#243126]">{service.title}</h3>
+                  <p className="mt-4 leading-7 text-[#646b60]">{service.text}</p>
                 </div>
               </Reveal>
             );

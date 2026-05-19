@@ -13,7 +13,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#05070a] text-white">
+    <main className="min-h-screen overflow-x-hidden bg-[#f7f1e7] text-[#243126]">
       <SiteMotion>
         <Navbar />
         <Hero />

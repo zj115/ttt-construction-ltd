@@ -18,15 +18,15 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "border-b border-white/10 bg-[#05070a]/72 shadow-2xl shadow-black/30 backdrop-blur-xl" : "bg-transparent"
+        scrolled ? "border-b border-[#6e5a42]/15 bg-[#fffaf1]/82 shadow-2xl shadow-[#6e4d2c]/10 backdrop-blur-xl" : "bg-transparent"
       }`}
     >
       <nav className="section-shell flex h-20 items-center justify-between">
         <a href="#home" className="group flex items-center gap-3" aria-label="TTT Construction Ltd home">
-          <span className="grid h-11 w-11 place-items-center border border-[#21a8ff]/40 bg-white/[0.06] font-display text-sm font-bold text-white shadow-[0_0_36px_rgba(33,168,255,0.25)]">
+          <span className="grid h-11 w-11 place-items-center border border-[#b87943]/35 bg-[#fffaf1]/80 font-display text-sm font-bold text-[#2f4a39] shadow-[0_12px_36px_rgba(184,121,67,0.16)]">
             TTT
           </span>
-          <span className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-white sm:text-base">
+          <span className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[#243126] sm:text-base">
             Construction Ltd
           </span>
         </a>
@@ -36,7 +36,7 @@ export default function Navbar() {
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="text-sm font-medium text-slate-300 transition hover:text-white"
+              className="text-sm font-medium text-[#5f675b] transition hover:text-[#2f4a39]"
             >
               {link}
             </a>
@@ -45,7 +45,7 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="hidden border border-[#21a8ff]/50 bg-[#21a8ff]/10 px-5 py-3 text-sm font-semibold text-white shadow-[0_0_30px_rgba(33,168,255,0.12)] transition hover:border-[#f6b655]/60 hover:bg-[#f6b655]/10 lg:inline-flex"
+          className="hidden border border-[#b87943]/35 bg-[#b87943] px-5 py-3 text-sm font-semibold text-white shadow-[0_16px_35px_rgba(184,121,67,0.2)] transition hover:border-[#2f4a39]/40 hover:bg-[#2f4a39] lg:inline-flex"
         >
           Get a Quote
         </a>
@@ -54,7 +54,7 @@ export default function Navbar() {
           type="button"
           aria-label="Toggle menu"
           onClick={() => setOpen((value) => !value)}
-          className="grid h-11 w-11 place-items-center border border-white/15 bg-white/[0.06] text-white lg:hidden"
+          className="grid h-11 w-11 place-items-center border border-[#6e5a42]/20 bg-[#fffaf1]/80 text-[#243126] lg:hidden"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -67,7 +67,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.22 }}
-            className="section-shell mb-4 border border-white/10 bg-[#08101a]/95 p-4 shadow-2xl shadow-black/40 backdrop-blur-xl lg:hidden"
+            className="section-shell mb-4 border border-[#6e5a42]/15 bg-[#fffaf1]/96 p-4 shadow-2xl shadow-[#6e4d2c]/14 backdrop-blur-xl lg:hidden"
           >
             <div className="grid gap-2">
               {links.map((link) => (
@@ -75,7 +75,7 @@ export default function Navbar() {
                   key={link}
                   href={`#${link.toLowerCase()}`}
                   onClick={() => setOpen(false)}
-                  className="px-4 py-3 text-sm font-medium text-slate-200 transition hover:bg-white/[0.06] hover:text-white"
+                  className="px-4 py-3 text-sm font-medium text-[#4f594d] transition hover:bg-[#eadcc8] hover:text-[#243126]"
                 >
                   {link}
                 </a>

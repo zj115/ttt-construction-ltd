@@ -37,12 +37,12 @@ export default function About() {
             const Icon = item.icon;
             return (
               <Reveal key={item.title} delay={index * 0.08}>
-                <div className="glow-border h-full border border-white/10 bg-white/[0.045] p-6 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.07]">
-                  <div className="mb-7 grid h-14 w-14 place-items-center border border-[#21a8ff]/35 bg-[#21a8ff]/10 text-[#67c7ff]">
+                <div className="glow-border h-full border border-[#6e5a42]/12 bg-[#fffaf1]/80 p-6 shadow-[0_18px_45px_rgba(95,73,44,0.08)] transition duration-300 hover:-translate-y-1 hover:bg-white">
+                  <div className="mb-7 grid h-14 w-14 place-items-center border border-[#8fa58d]/45 bg-[#8fa58d]/18 text-[#2f4a39]">
                     <Icon size={25} />
                   </div>
-                  <h3 className="font-display text-2xl font-semibold text-white">{item.title}</h3>
-                  <p className="mt-4 leading-7 text-slate-300">{item.text}</p>
+                  <h3 className="font-display text-2xl font-semibold text-[#243126]">{item.title}</h3>
+                  <p className="mt-4 leading-7 text-[#646b60]">{item.text}</p>
                 </div>
               </Reveal>
             );

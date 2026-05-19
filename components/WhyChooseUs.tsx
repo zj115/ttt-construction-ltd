@@ -27,11 +27,11 @@ export default function WhyChooseUs() {
             const Icon = reason.icon;
             return (
               <Reveal key={reason.title} delay={index * 0.05}>
-                <div className="flex h-full items-center gap-4 border border-white/10 bg-white/[0.045] p-5 transition hover:border-[#f6b655]/45 hover:bg-white/[0.07]">
-                  <span className="grid h-11 w-11 shrink-0 place-items-center border border-[#f6b655]/35 bg-[#f6b655]/10 text-[#f6b655]">
+                <div className="flex h-full items-center gap-4 border border-[#6e5a42]/12 bg-[#fffaf1]/78 p-5 shadow-[0_14px_35px_rgba(95,73,44,0.07)] transition hover:border-[#b87943]/45 hover:bg-white">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center border border-[#b87943]/35 bg-[#b87943]/10 text-[#8a5a31]">
                     <Icon size={21} />
                   </span>
-                  <h3 className="font-display text-lg font-semibold text-white">{reason.title}</h3>
+                  <h3 className="font-display text-lg font-semibold text-[#243126]">{reason.title}</h3>
                 </div>
               </Reveal>
             );
