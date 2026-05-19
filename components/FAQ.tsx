@@ -3,50 +3,50 @@ import SectionHeading from "@/components/SectionHeading";
 
 const faqs = [
   {
-    question: "Do you work on standalone house builds?",
-    answer:
-      "Yes. TTT Construction Ltd focuses on residential construction and renovation, including detached homes, extensions, renovations, and finishing work."
-  },
-  {
-    question: "Can you help before construction starts?",
-    answer:
-      "Yes. TTT Construction Ltd can support early consultation, scope review, build planning, quotations, and practical sequencing."
-  },
-  {
     question: "How do I request a quote?",
     answer:
-      "Send your project type, site suburb, drawings status, approximate budget, and preferred start date. We will review the information and confirm the next step."
+      "Send your project type, site location, drawings status, preferred start date, and approximate budget. We will review the details and confirm the next step."
   },
   {
-    question: "Can you help with consent and drawings?",
+    question: "Do you handle renovation and extension projects?",
     answer:
-      "We can discuss consent requirements, drawings, and buildability during the consultation. Where specialist design or engineering input is needed, that can be coordinated with the right professionals."
+      "Yes. TTT Construction Ltd can support residential renovations, extensions, layout changes, exterior improvements, and related finishing work."
   },
   {
-    question: "What happens after handover?",
+    question: "Can you help with early project planning?",
     answer:
-      "The handover process can include final quality checks, workmanship expectations, maintenance notes, and aftercare follow-up for agreed items."
+      "Yes. We can discuss scope, buildability, drawings, consent considerations, budget expectations, sequencing, and what information is needed before pricing."
+  },
+  {
+    question: "Which areas do you service?",
+    answer:
+      "TTT Construction Ltd is based in New Zealand and can discuss residential construction enquiries across New Zealand, with Waikato enquiries welcome."
+  },
+  {
+    question: "What should I prepare before contacting you?",
+    answer:
+      "Helpful details include the site location, project type, drawings or concept plans, current project stage, consent status, timing goals, budget range, and any access constraints."
   }
 ];
 
 export default function FAQ() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="section-glow py-24 sm:py-32">
       <div className="section-shell">
         <SectionHeading eyebrow="FAQ" title="Common Questions Before You Start Building" />
         <div className="grid gap-4 md:grid-cols-2">
           {faqs.map((item, index) => (
             <Reveal key={item.question} delay={index * 0.05}>
-              <details className="soft-card group p-6 transition duration-300 open:shadow-[0_24px_54px_rgba(95,73,44,0.12)]">
-                <summary className="cursor-pointer list-none font-display text-xl font-semibold text-[#243126]">
+              <details className="glass-card group p-6 transition duration-300 open:shadow-[0_24px_54px_rgba(0,0,0,0.28)]">
+                <summary className="cursor-pointer list-none font-display text-xl font-semibold text-white">
                   <span className="flex items-center justify-between gap-4">
                     {item.question}
-                    <span className="liquid-glass grid h-9 w-9 shrink-0 place-items-center text-[#8a5a31] transition group-open:rotate-45">
+                    <span className="liquid-glass grid h-9 w-9 shrink-0 place-items-center text-[#f0b76c] transition group-open:rotate-45">
                       +
                     </span>
                   </span>
                 </summary>
-                <p className="mt-4 leading-7 text-[#646b60]">{item.answer}</p>
+                <p className="mt-4 leading-7 text-white/68">{item.answer}</p>
               </details>
             </Reveal>
           ))}

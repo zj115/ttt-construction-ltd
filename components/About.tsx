@@ -1,49 +1,60 @@
-import { CheckCircle2, Eye, Handshake } from "lucide-react";
+import { BadgeCheck, ClipboardCheck, Hammer, MessageSquareText } from "lucide-react";
+import GlassCard from "@/components/GlassCard";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 
 const values = [
   {
-    title: "Quality First",
-    text: "Workmanship, materials, and finishing standards are treated as core project priorities.",
-    icon: CheckCircle2
+    title: "Quality Workmanship",
+    text: "We focus on durable construction details, clean finishes, and work that meets New Zealand building expectations.",
+    icon: Hammer
+  },
+  {
+    title: "Transparent Communication",
+    text: "Clients receive clear updates, practical advice, and honest communication throughout each stage of the project.",
+    icon: MessageSquareText
   },
   {
     title: "Reliable Delivery",
-    text: "Clear planning and practical site coordination keep each stage moving with confidence.",
-    icon: Eye
+    text: "We plan each project carefully to support smooth progress, realistic timelines, and professional handover.",
+    icon: ClipboardCheck
   },
   {
-    title: "Client Focused",
-    text: "Transparent communication helps owners and stakeholders understand progress at every step.",
-    icon: Handshake
+    title: "NZ Building Standards",
+    text: "Our work is guided by local building requirements, safety awareness, and responsible construction practice.",
+    icon: BadgeCheck
   }
 ];
 
 export default function About() {
   return (
-    <section id="about" className="relative py-24 sm:py-32">
+    <section id="about" className="section-glow relative py-24 sm:py-32">
       <div className="section-shell">
         <SectionHeading eyebrow="About" title="About TTT Construction Ltd">
           <p>
-            TTT Construction Ltd is a professional construction company supporting New Zealand
-            clients with quality workmanship, transparent communication, and reliable project
-            delivery aligned with local standards.
+            A New Zealand construction company focused on quality, transparency, and reliable
+            project delivery.
+          </p>
+          <p className="mt-4">
+            TTT Construction Ltd provides residential construction, renovation, extension, and
+            project management services across New Zealand. We focus on clear communication,
+            practical planning, safe building practices, and high-quality workmanship from the first
+            consultation to final handover.
           </p>
         </SectionHeading>
 
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {values.map((item, index) => {
             const Icon = item.icon;
             return (
               <Reveal key={item.title} delay={index * 0.08}>
-                <div className="soft-card glow-border h-full p-6 transition duration-300 hover:-translate-y-1">
-                  <div className="mb-7 grid h-14 w-14 place-items-center border border-[#8fa58d]/45 bg-[#8fa58d]/18 text-[#2f4a39]">
+                <GlassCard className="glow-border h-full p-6">
+                  <div className="mb-7 grid h-14 w-14 place-items-center rounded-2xl border border-white/15 bg-white/8 text-[#70d7ff]">
                     <Icon size={25} />
                   </div>
-                  <h3 className="font-display text-2xl font-semibold text-[#243126]">{item.title}</h3>
-                  <p className="mt-4 leading-7 text-[#646b60]">{item.text}</p>
-                </div>
+                  <h3 className="font-display text-2xl font-semibold text-white">{item.title}</h3>
+                  <p className="mt-4 leading-7 text-white/68">{item.text}</p>
+                </GlassCard>
               </Reveal>
             );
           })}
