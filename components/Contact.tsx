@@ -5,11 +5,22 @@ import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 
 const fields = [
-  { label: "Name", type: "text", name: "name" },
-  { label: "Email", type: "email", name: "email" },
-  { label: "Phone", type: "tel", name: "phone" },
-  { label: "Project Type", type: "text", name: "projectType" }
+  { label: "Name", type: "text", name: "name", placeholder: "Your name" },
+  { label: "Email", type: "email", name: "email", placeholder: "you@example.com" },
+  { label: "Phone", type: "tel", name: "phone", placeholder: "+64 ..." },
+  { label: "Location", type: "text", name: "location", placeholder: "City / suburb" }
 ];
+
+const projectTypes = [
+  "New detached home",
+  "House extension",
+  "Full renovation",
+  "Kitchen / bathroom upgrade",
+  "Outdoor living / deck",
+  "Maintenance / repairs"
+];
+
+const budgetRanges = ["Under $100k", "$100k - $250k", "$250k - $500k", "$500k+", "Not sure yet"];
 
 export default function Contact() {
   return (
@@ -18,8 +29,8 @@ export default function Contact() {
       <div className="section-shell relative">
         <SectionHeading eyebrow="Contact" title="Start Your Project with TTT Construction Ltd">
           <p>
-            Share a few details about your build, renovation, fit-out, or maintenance work and our
-            team will be ready to discuss the next step.
+            Share a few details about your standalone home build, extension, renovation, or repair
+            work and our team will be ready to discuss the next step.
           </p>
         </SectionHeading>
 
@@ -34,11 +45,56 @@ export default function Contact() {
                       name={field.name}
                       type={field.type}
                       className="border border-white/10 bg-black/24 px-4 py-3 text-white outline-none transition placeholder:text-slate-600 focus:border-[#21a8ff]/70"
-                      placeholder={field.label}
+                      placeholder={field.placeholder}
                     />
                   </label>
                 ))}
               </div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <label className="grid gap-2 text-sm font-medium text-slate-300">
+                  Project Type
+                  <select
+                    name="projectType"
+                    defaultValue=""
+                    className="border border-white/10 bg-black/24 px-4 py-3 text-white outline-none transition focus:border-[#21a8ff]/70"
+                  >
+                    <option value="" disabled>
+                      Select project type
+                    </option>
+                    {projectTypes.map((type) => (
+                      <option key={type} value={type}>
+                        {type}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="grid gap-2 text-sm font-medium text-slate-300">
+                  Estimated Budget
+                  <select
+                    name="budget"
+                    defaultValue=""
+                    className="border border-white/10 bg-black/24 px-4 py-3 text-white outline-none transition focus:border-[#21a8ff]/70"
+                  >
+                    <option value="" disabled>
+                      Select budget range
+                    </option>
+                    {budgetRanges.map((budget) => (
+                      <option key={budget} value={budget}>
+                        {budget}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              </div>
+              <label className="grid gap-2 text-sm font-medium text-slate-300">
+                Preferred Timeline
+                <input
+                  name="timeline"
+                  type="text"
+                  className="border border-white/10 bg-black/24 px-4 py-3 text-white outline-none transition placeholder:text-slate-600 focus:border-[#21a8ff]/70"
+                  placeholder="ASAP, 3-6 months, planning stage..."
+                />
+              </label>
               <label className="grid gap-2 text-sm font-medium text-slate-300">
                 Message
                 <textarea
@@ -92,8 +148,8 @@ export default function Contact() {
               </div>
               <div className="mt-10 border-t border-white/10 pt-6">
                 <p className="text-sm leading-7 text-slate-400">
-                  Construction / Building / Renovation / Project Management for homeowners,
-                  commercial clients, developers, and renovation customers across New Zealand.
+                  Standalone homes / Extensions / Renovations / Residential project management for
+                  homeowners and developers across New Zealand.
                 </p>
               </div>
             </aside>

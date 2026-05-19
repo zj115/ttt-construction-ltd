@@ -1,35 +1,36 @@
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 
 const projects = [
   {
     name: "Modern Residential Build",
-    category: "Residential",
+    category: "New Detached Home",
     location: "Auckland, NZ",
-    text: "A crisp new-build concept focused on structure, light, and long-term liveability.",
-    accent: "from-[#21a8ff] via-[#22384d] to-[#07111d]"
+    text: "A full standalone home build focused on structure, light, street appeal, and long-term liveability.",
+    image: "/images/modern-detached-home.jpg"
   },
   {
-    name: "Commercial Interior Upgrade",
-    category: "Commercial",
+    name: "Premium Family Home",
+    category: "Residential Build",
     location: "Wellington, NZ",
-    text: "Interior improvement work designed for efficient handover and daily business use.",
-    accent: "from-[#f6b655] via-[#36404c] to-[#081018]"
+    text: "A refined two-storey home concept with strong exterior detailing and clean residential finishes.",
+    image: "/images/luxury-suburban-home.jpg"
   },
   {
-    name: "Home Renovation Project",
-    category: "Renovation",
+    name: "Rural Single-Family Home",
+    category: "Standalone House",
     location: "Christchurch, NZ",
-    text: "A practical renovation program improving flow, finish quality, and usability.",
-    accent: "from-[#82e5ff] via-[#1d3342] to-[#05070a]"
+    text: "A practical standalone home build for lifestyle sections, rural settings, and resilient everyday use.",
+    image: "/images/rural-single-family-home.jpg"
   },
   {
-    name: "Structural Improvement Work",
-    category: "Maintenance",
+    name: "Residential Construction Site",
+    category: "New Build Stage",
     location: "Hamilton, NZ",
-    text: "Targeted strengthening and repair scope with careful staging and quality checks.",
-    accent: "from-[#ff9d42] via-[#26323d] to-[#07111d]"
+    text: "Framing, site coordination, materials staging, and construction control for a new residential project.",
+    image: "/images/residential-construction-site.jpg"
   }
 ];
 
@@ -37,10 +38,10 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24 sm:py-32">
       <div className="section-shell">
-        <SectionHeading eyebrow="Projects" title="Recent Project Capabilities">
+        <SectionHeading eyebrow="Projects" title="Standalone Home Project Capabilities">
           <p>
-            Representative project examples showing the type of construction, renovation, and
-            improvement work TTT Construction Ltd can support across New Zealand.
+            Residential project examples showing the type of standalone homes, new build stages,
+            and renovation-led improvement work TTT Construction Ltd can support across New Zealand.
           </p>
         </SectionHeading>
 
@@ -48,10 +49,18 @@ export default function Projects() {
           {projects.map((project, index) => (
             <Reveal key={project.name} delay={index * 0.07}>
               <article className="group overflow-hidden border border-white/10 bg-white/[0.045]">
-                <div className={`relative h-64 overflow-hidden bg-gradient-to-br ${project.accent}`}>
-                  <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.18)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.09)_1px,transparent_1px)] bg-[size:42px_42px] opacity-45 transition duration-500 group-hover:scale-110" />
-                  <div className="absolute inset-x-8 bottom-8 h-24 border border-white/20 bg-black/10 backdrop-blur-[2px] transition duration-500 group-hover:scale-105" />
+                <div className="relative h-72 overflow-hidden bg-[#08101a]">
+                  <Image
+                    src={project.image}
+                    alt={`${project.name} exterior residential construction image`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#05070a] via-[#05070a]/18 to-transparent" />
+                  <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.18)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.09)_1px,transparent_1px)] bg-[size:42px_42px] opacity-0 mix-blend-screen transition duration-500 group-hover:opacity-55" />
                   <div className="absolute inset-0 bg-black/0 transition duration-500 group-hover:bg-black/24" />
+                  <div className="absolute bottom-6 left-6 right-16 h-px origin-left scale-x-0 bg-[#21a8ff] shadow-[0_0_28px_rgba(33,168,255,0.8)] transition duration-500 group-hover:scale-x-100" />
                   <ArrowUpRight className="absolute right-6 top-6 text-white opacity-70 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100" />
                 </div>
                 <div className="p-6">

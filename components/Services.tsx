@@ -1,28 +1,28 @@
 import {
-  Building,
   ClipboardCheck,
+  DraftingCompass,
   Hammer,
   Home,
   Paintbrush,
-  Wrench
+  Trees
 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 
 const services = [
   {
-    title: "Residential Construction",
-    text: "New home builds shaped around durable structure, smart detailing, and everyday living.",
+    title: "New Detached Homes",
+    text: "Standalone residential builds shaped around durable structure, practical layouts, and everyday living.",
     icon: Home
   },
   {
-    title: "Commercial Construction",
-    text: "Practical commercial spaces delivered with disciplined coordination and site control.",
-    icon: Building
+    title: "Design-to-Build Support",
+    text: "Early construction advice, buildability review, planning coordination, and clear quotation support.",
+    icon: DraftingCompass
   },
   {
     title: "Renovation & Extensions",
-    text: "Careful upgrades that respect existing structures while improving comfort and value.",
+    text: "House upgrades, additions, layout changes, and extensions that improve comfort, flow, and value.",
     icon: Hammer
   },
   {
@@ -31,14 +31,14 @@ const services = [
     icon: ClipboardCheck
   },
   {
-    title: "Interior Fit-outs",
-    text: "Clean, functional interiors for homes, offices, retail, and specialist commercial spaces.",
+    title: "Interior Finishing",
+    text: "Kitchen, bathroom, flooring, wall lining, detailing, and finishing work for complete residential handover.",
     icon: Paintbrush
   },
   {
-    title: "Maintenance & Repairs",
-    text: "Responsive repair and upkeep services to protect buildings and keep operations moving.",
-    icon: Wrench
+    title: "Outdoor Living & Repairs",
+    text: "Decks, exterior upgrades, maintenance, repairs, and practical improvements around the home.",
+    icon: Trees
   }
 ];
 
@@ -47,10 +47,10 @@ export default function Services() {
     <section id="services" className="relative overflow-hidden py-24 sm:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(33,168,255,0.12),transparent_34rem)]" />
       <div className="section-shell relative">
-        <SectionHeading eyebrow="Services" title="Construction Services Built for New Zealand">
+        <SectionHeading eyebrow="Services" title="Residential Construction Services Built for New Zealand">
           <p>
-            From full builds to precise renovation and maintenance work, TTT Construction Ltd brings
-            structured delivery and professional care to every project type.
+            From new standalone homes to extensions, finishing, and repairs, TTT Construction Ltd
+            brings structured delivery and professional care to residential projects.
           </p>
         </SectionHeading>
 
