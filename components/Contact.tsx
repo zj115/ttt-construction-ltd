@@ -46,7 +46,7 @@ export default function Contact() {
                     <input
                       name={field.name}
                       type={field.type}
-                      className="border border-[#6e5a42]/14 bg-white/72 px-4 py-3 text-[#243126] outline-none transition placeholder:text-[#9b8469] focus:border-[#8fa58d]"
+                      className="liquid-field px-4 py-3 text-[#243126] outline-none transition placeholder:text-[#9b8469]"
                       placeholder={field.placeholder}
                     />
                   </label>
@@ -58,7 +58,7 @@ export default function Contact() {
                   <select
                     name="projectType"
                     defaultValue=""
-                    className="border border-[#6e5a42]/14 bg-white/72 px-4 py-3 text-[#243126] outline-none transition focus:border-[#8fa58d]"
+                    className="liquid-field px-4 py-3 text-[#243126] outline-none transition"
                   >
                     <option value="" disabled>
                       Select project type
@@ -75,7 +75,7 @@ export default function Contact() {
                   <select
                     name="budget"
                     defaultValue=""
-                    className="border border-[#6e5a42]/14 bg-white/72 px-4 py-3 text-[#243126] outline-none transition focus:border-[#8fa58d]"
+                    className="liquid-field px-4 py-3 text-[#243126] outline-none transition"
                   >
                     <option value="" disabled>
                       Select budget range
@@ -94,7 +94,7 @@ export default function Contact() {
                   <select
                     name="hasDrawings"
                     defaultValue=""
-                    className="border border-[#6e5a42]/14 bg-white/72 px-4 py-3 text-[#243126] outline-none transition focus:border-[#8fa58d]"
+                    className="liquid-field px-4 py-3 text-[#243126] outline-none transition"
                   >
                     <option value="" disabled>
                       Select an option
@@ -111,7 +111,7 @@ export default function Contact() {
                   <select
                     name="consentSupport"
                     defaultValue=""
-                    className="border border-[#6e5a42]/14 bg-white/72 px-4 py-3 text-[#243126] outline-none transition focus:border-[#8fa58d]"
+                    className="liquid-field px-4 py-3 text-[#243126] outline-none transition"
                   >
                     <option value="" disabled>
                       Select an option
@@ -129,7 +129,7 @@ export default function Contact() {
                 <input
                   name="timeline"
                   type="text"
-                  className="border border-[#6e5a42]/14 bg-white/72 px-4 py-3 text-[#243126] outline-none transition placeholder:text-[#9b8469] focus:border-[#8fa58d]"
+                  className="liquid-field px-4 py-3 text-[#243126] outline-none transition placeholder:text-[#9b8469]"
                   placeholder="ASAP, 3-6 months, planning stage..."
                 />
               </label>
@@ -138,7 +138,7 @@ export default function Contact() {
                 <textarea
                   name="message"
                   rows={6}
-                  className="resize-none border border-[#6e5a42]/14 bg-white/72 px-4 py-3 text-[#243126] outline-none transition placeholder:text-[#9b8469] focus:border-[#8fa58d]"
+                  className="liquid-field resize-none px-4 py-3 text-[#243126] outline-none transition placeholder:text-[#9b8469]"
                   placeholder="Tell us about your project..."
                 />
               </label>
@@ -152,7 +152,7 @@ export default function Contact() {
           </Reveal>
 
           <Reveal delay={0.12}>
-            <aside className="h-full border border-[#6e5a42]/12 bg-[#fffaf1]/82 p-7 shadow-[0_18px_45px_rgba(95,73,44,0.08)]">
+            <aside className="soft-card h-full p-7">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#8a5a31]">
                 Company Information
               </p>

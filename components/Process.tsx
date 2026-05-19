@@ -28,7 +28,7 @@ export default function Process() {
             const Icon = step.icon;
             return (
               <Reveal key={step.title} delay={index * 0.08}>
-                <div className="relative h-full border border-[#6e5a42]/12 bg-[#fffaf1]/82 p-5 shadow-[0_16px_38px_rgba(95,73,44,0.07)] transition hover:-translate-y-1 hover:border-[#8fa58d] hover:bg-white">
+                <div className="soft-card relative h-full p-5 transition hover:-translate-y-1">
                   <div className="mb-6 flex items-center justify-between">
                     <span className="grid h-12 w-12 place-items-center border border-[#8fa58d]/40 bg-[#8fa58d]/16 text-[#2f4a39]">
                       <Icon size={23} />
@@ -43,7 +43,7 @@ export default function Process() {
           })}
         </div>
 
-        <Reveal delay={0.18} className="mx-auto mt-10 flex max-w-2xl items-center gap-4 border border-[#6e5a42]/12 bg-[#fffaf1]/80 p-5 text-[#646b60] shadow-[0_14px_35px_rgba(95,73,44,0.07)]">
+        <Reveal delay={0.18} className="soft-card mx-auto mt-10 flex max-w-2xl items-center gap-4 p-5 text-[#646b60]">
           <Ruler className="shrink-0 text-[#8a5a31]" size={24} />
           <p className="leading-7">
             Every project has its own constraints. The process is adapted to the site, scope, and

@@ -68,7 +68,7 @@ export default function HomeBuildScope() {
           })}
         </div>
 
-        <Reveal className="mt-8 grid gap-6 border border-[#6e5a42]/12 bg-[#fffaf1]/70 p-6 shadow-[0_18px_45px_rgba(95,73,44,0.08)] lg:grid-cols-[0.8fr_1.2fr]">
+        <Reveal className="soft-card mt-8 grid gap-6 p-6 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="flex gap-4">
             <Ruler className="mt-1 shrink-0 text-[#8a5a31]" size={26} />
             <div>
@@ -81,7 +81,7 @@ export default function HomeBuildScope() {
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             {inclusions.map((item) => (
-              <div key={item} className="flex items-center gap-3 rounded-full bg-white/62 px-4 py-3 text-sm font-medium text-[#4f594d]">
+              <div key={item} className="liquid-glass flex items-center gap-3 px-4 py-3 text-sm font-medium text-[#4f594d]">
                 <ClipboardCheck size={17} className="shrink-0 text-[#2f4a39]" />
                 {item}
               </div>

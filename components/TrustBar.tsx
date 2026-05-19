@@ -74,7 +74,7 @@ export default function TrustBar() {
           })}
         </div>
 
-        <Reveal className="mt-8 flex flex-col gap-4 rounded-[28px] border border-[#8fa58d]/28 bg-[#8fa58d]/14 p-6 sm:flex-row sm:items-center sm:justify-between">
+        <Reveal className="soft-card mt-8 flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-2xl leading-7 text-[#4f594d]">
             Need a clearer answer on consent, drawings, scope, warranty, or insurance? Start with a
             free consultation and we will tell you what information is needed before pricing.

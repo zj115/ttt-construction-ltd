@@ -32,11 +32,11 @@ export default function FAQ() {
         <div className="grid gap-4 md:grid-cols-2">
           {faqs.map((item, index) => (
             <Reveal key={item.question} delay={index * 0.05}>
-              <details className="group border border-[#6e5a42]/12 bg-[#fffaf1]/82 p-6 shadow-[0_14px_35px_rgba(95,73,44,0.07)] open:border-[#8fa58d] open:bg-white">
+              <details className="soft-card group p-6 transition duration-300 open:shadow-[0_24px_54px_rgba(95,73,44,0.12)]">
                 <summary className="cursor-pointer list-none font-display text-xl font-semibold text-[#243126]">
                   <span className="flex items-center justify-between gap-4">
                     {item.question}
-                    <span className="grid h-8 w-8 shrink-0 place-items-center border border-[#6e5a42]/15 text-[#8a5a31] transition group-open:rotate-45">
+                    <span className="liquid-glass grid h-9 w-9 shrink-0 place-items-center text-[#8a5a31] transition group-open:rotate-45">
                       +
                     </span>
                   </span>

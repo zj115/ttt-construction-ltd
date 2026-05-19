@@ -56,7 +56,7 @@ export default function Projects() {
         <div className="grid gap-5 md:grid-cols-2">
           {projects.map((project, index) => (
             <Reveal key={project.name} delay={index * 0.07}>
-              <article className="group overflow-hidden border border-[#6e5a42]/12 bg-[#fffaf1]/82 shadow-[0_18px_45px_rgba(95,73,44,0.08)]">
+              <article className="soft-card group overflow-hidden">
                 <div className="relative h-72 overflow-hidden bg-[#efe4d4]">
                   <Image
                     src={project.image}
@@ -93,7 +93,7 @@ export default function Projects() {
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {project.keyWork.map((item) => (
-                        <span key={item} className="rounded-full bg-[#efe4d4]/70 px-3 py-2 text-xs font-medium text-[#4f594d]">
+                        <span key={item} className="liquid-glass inline-flex px-3 py-2 text-xs font-medium text-[#4f594d]">
                           {item}
                         </span>
                       ))}

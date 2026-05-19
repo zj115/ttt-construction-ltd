@@ -37,7 +37,7 @@ export default function About() {
             const Icon = item.icon;
             return (
               <Reveal key={item.title} delay={index * 0.08}>
-                <div className="glow-border h-full border border-[#6e5a42]/12 bg-[#fffaf1]/80 p-6 shadow-[0_18px_45px_rgba(95,73,44,0.08)] transition duration-300 hover:-translate-y-1 hover:bg-white">
+                <div className="soft-card glow-border h-full p-6 transition duration-300 hover:-translate-y-1">
                   <div className="mb-7 grid h-14 w-14 place-items-center border border-[#8fa58d]/45 bg-[#8fa58d]/18 text-[#2f4a39]">
                     <Icon size={25} />
                   </div>

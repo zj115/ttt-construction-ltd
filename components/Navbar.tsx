@@ -23,7 +23,7 @@ export default function Navbar() {
     >
       <nav className="section-shell flex h-20 items-center justify-between">
         <a href="#home" className="group flex items-center gap-3" aria-label="TTT Construction Ltd home">
-          <span className="grid h-11 w-11 place-items-center border border-[#b87943]/35 bg-[#fffaf1]/80 font-display text-sm font-bold text-[#2f4a39] shadow-[0_12px_36px_rgba(184,121,67,0.16)]">
+          <span className="liquid-glass grid h-11 w-11 place-items-center font-display text-sm font-bold text-[#2f4a39]">
             TTT
           </span>
           <span className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[#243126] sm:text-base">
@@ -54,7 +54,7 @@ export default function Navbar() {
           type="button"
           aria-label="Toggle menu"
           onClick={() => setOpen((value) => !value)}
-          className="grid h-11 w-11 place-items-center border border-[#6e5a42]/20 bg-[#fffaf1]/80 text-[#243126] lg:hidden"
+          className="liquid-glass grid h-11 w-11 place-items-center text-[#243126] lg:hidden"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -67,7 +67,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.22 }}
-            className="section-shell mb-4 border border-[#6e5a42]/15 bg-[#fffaf1]/96 p-4 shadow-2xl shadow-[#6e4d2c]/14 backdrop-blur-xl lg:hidden"
+            className="glass section-shell mb-4 p-4 lg:hidden"
           >
             <div className="grid gap-2">
               {links.map((link) => (

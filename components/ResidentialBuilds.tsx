@@ -51,7 +51,7 @@ export default function ResidentialBuilds() {
 
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
-            <div className="relative min-h-[520px] overflow-hidden border border-[#6e5a42]/12 bg-[#fffaf1]/70 shadow-[0_22px_60px_rgba(95,73,44,0.12)]">
+            <div className="soft-card relative min-h-[520px] overflow-hidden">
               <Image
                 src="/images/luxury-suburban-home.jpg"
                 alt="Modern standalone residential home exterior"
@@ -80,7 +80,7 @@ export default function ResidentialBuilds() {
 
           <div className="grid gap-5">
             <Reveal delay={0.08}>
-              <div className="border border-[#6e5a42]/12 bg-[#fffaf1]/82 p-6 shadow-[0_18px_45px_rgba(95,73,44,0.08)] sm:p-8">
+              <div className="soft-card p-6 sm:p-8">
                 <div className="grid gap-4 sm:grid-cols-2">
                   {capabilities.map((item) => (
                     <div key={item} className="flex items-start gap-3 text-[#4f594d]">
@@ -97,7 +97,7 @@ export default function ResidentialBuilds() {
                 const Icon = card.icon;
                 return (
                   <Reveal key={card.title} delay={0.14 + index * 0.06}>
-                    <div className="glow-border h-full border border-[#6e5a42]/12 bg-[#fffaf1]/82 p-5 shadow-[0_14px_35px_rgba(95,73,44,0.07)] transition hover:-translate-y-1 hover:bg-white">
+                    <div className="soft-card glow-border h-full p-5 transition hover:-translate-y-1">
                       <Icon className="mb-5 text-[#8a5a31]" size={25} />
                       <h3 className="font-display text-lg font-semibold text-[#243126]">{card.title}</h3>
                       <p className="mt-3 text-sm leading-6 text-[#646b60]">{card.text}</p>
@@ -108,7 +108,7 @@ export default function ResidentialBuilds() {
             </div>
 
             <Reveal delay={0.24}>
-              <div className="flex flex-col gap-4 border border-[#8fa58d]/35 bg-[#8fa58d]/16 p-5 sm:flex-row sm:items-center sm:justify-between">
+              <div className="soft-card flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-center gap-3">
                   <Layers3 className="text-[#2f4a39]" size={24} />
                   <p className="font-display text-xl font-semibold text-[#243126]">
