@@ -14,13 +14,13 @@ export default function Hero() {
         muted
         loop
         playsInline
-        poster="/images/residential-construction-site.jpg"
-        aria-label="Residential house construction background video"
+        poster="/images/detached-home-build-poster.jpg"
+        aria-label="Detached home timber frame construction background video"
       >
-        <source src="/videos/house-construction.mp4" type="video/mp4" />
+        <source src="/videos/detached-home-build.mp4" type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-gradient-to-r from-[#f7f1e7]/96 via-[#f7f1e7]/76 to-[#f7f1e7]/34" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#f7f1e7] via-[#f7f1e7]/8 to-[#fffaf1]/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#f7f1e7]/92 via-[#f7f1e7]/66 to-[#f7f1e7]/22" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#f7f1e7] via-[#f7f1e7]/10 to-[#fffaf1]/30" />
       <div className="beam left-[-10rem] top-28 bg-[#8fa58d]" />
       <div className="beam bottom-10 right-[-12rem] bg-[#b87943]" />
       <motion.div
