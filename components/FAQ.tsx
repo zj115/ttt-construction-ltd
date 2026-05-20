@@ -3,29 +3,44 @@ import SectionHeading from "@/components/SectionHeading";
 
 const faqs = [
   {
-    question: "How do I request a quote?",
+    question: "What information should I prepare before requesting a quote?",
     answer:
-      "Send your project type, site location, drawings status, preferred start date, and approximate budget. We will review the details and confirm the next step."
+      "Helpful details include site location, project type (new build, renovation, extension), drawings or concept plans, current consent status, preferred timeline, estimated budget range, and any site access constraints. The more detail you provide, the easier it is to understand the scope."
   },
   {
-    question: "Do you handle renovation and extension projects?",
+    question: "Do I need drawings before contacting you?",
     answer:
-      "Yes. TTT Construction Ltd can support residential renovations, extensions, layout changes, exterior improvements, and related finishing work."
+      "Not necessarily. We can discuss early-stage projects and provide buildability advice before drawings are finalised. However, detailed quotations require drawings, specifications, and confirmed scope."
   },
   {
-    question: "Can you help with early project planning?",
+    question: "Can you help before building consent is obtained?",
     answer:
-      "Yes. We can discuss scope, buildability, drawings, consent considerations, budget expectations, sequencing, and what information is needed before pricing."
+      "Yes. We can provide early construction advice, scope review, and planning support. Where restricted building work or consent requirements apply, the correct licensed professionals and documentation should be confirmed before work begins."
   },
   {
-    question: "Which areas do you service?",
+    question: "How are variations handled during construction?",
     answer:
-      "TTT Construction Ltd is based in New Zealand and can discuss residential construction enquiries across New Zealand, with Waikato enquiries welcome."
+      "Variations are discussed and documented before proceeding. Changes to scope, specifications, or site conditions may affect cost and timeline. Clear communication ensures variations are managed transparently."
   },
   {
-    question: "What should I prepare before contacting you?",
+    question: "How are payment stages discussed?",
     answer:
-      "Helpful details include the site location, project type, drawings or concept plans, current project stage, consent status, timing goals, budget range, and any access constraints."
+      "Payment milestones are tailored to each project and confirmed in the quotation or contract. Typical stages include deposit, site preparation, framing, interior stage, practical completion, and final handover. Payments are linked to completed work stages."
+  },
+  {
+    question: "What happens at handover?",
+    answer:
+      "Handover includes a final walkthrough, workmanship check, defect resolution, maintenance notes, product information, and project sign-off. The process ensures the project is completed to agreed standards."
+  },
+  {
+    question: "Do you work outside Waikato?",
+    answer:
+      "TTT Construction Ltd is based in New Zealand and can discuss residential construction enquiries across New Zealand. Waikato enquiries are particularly welcome."
+  },
+  {
+    question: "Can you handle renovation and extension projects?",
+    answer:
+      "Yes. We support residential renovations, extensions, layout changes, kitchen and bathroom upgrades, exterior improvements, and related finishing work."
   }
 ];
 

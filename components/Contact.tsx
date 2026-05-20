@@ -24,6 +24,14 @@ const budgetRanges = ["Under $100k", "$100k - $250k", "$250k - $500k", "$500k+",
 
 const drawingsOptions = ["Yes", "No", "Not yet"];
 
+const consentOptions = [
+  "Consent approved",
+  "Consent lodged",
+  "Pre-consent stage",
+  "Not started",
+  "Not required"
+];
+
 export default function Contact() {
   return (
     <section id="contact" className="section-glow relative overflow-hidden py-24 sm:py-32">
@@ -54,23 +62,6 @@ export default function Contact() {
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="grid gap-2 text-sm font-medium text-white/72">
-                  Project Type
-                  <select
-                    name="projectType"
-                    defaultValue=""
-                    className="liquid-field px-4 py-3 outline-none transition"
-                  >
-                    <option value="" disabled>
-                      Select project type
-                    </option>
-                    {projectTypes.map((type) => (
-                      <option key={type} value={type}>
-                        {type}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-                <label className="grid gap-2 text-sm font-medium text-white/72">
                   Do you already have drawings?
                   <select
                     name="hasDrawings"
@@ -81,6 +72,23 @@ export default function Contact() {
                       Select an option
                     </option>
                     {drawingsOptions.map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="grid gap-2 text-sm font-medium text-white/72">
+                  Consent Status
+                  <select
+                    name="consentStatus"
+                    defaultValue=""
+                    className="liquid-field px-4 py-3 outline-none transition"
+                  >
+                    <option value="" disabled>
+                      Select consent status
+                    </option>
+                    {consentOptions.map((option) => (
                       <option key={option} value={option}>
                         {option}
                       </option>
