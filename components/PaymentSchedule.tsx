@@ -1,4 +1,4 @@
-import { Calendar, CheckCircle2, CreditCard, FileCheck, Foundation, Home } from "lucide-react";
+import { Calendar, CheckCircle2, CreditCard, FileCheck, Hammer, Home } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 
@@ -11,7 +11,7 @@ const stages = [
   {
     title: "Site Preparation",
     text: "Payment for site works, earthworks, and foundation preparation.",
-    icon: Foundation
+    icon: Hammer
   },
   {
     title: "Framing & Enclosure",
