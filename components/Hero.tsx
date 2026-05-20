@@ -27,27 +27,9 @@ export default function Hero() {
         animate={{ backgroundPosition: ["0px 0px", "54px 54px"] }}
         transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
       />
-      <motion.div
-        aria-hidden="true"
-        className="absolute right-[8%] top-32 hidden rounded-full border border-white/18 bg-[#101c26]/44 px-5 py-3 text-sm font-semibold text-white/84 shadow-[0_18px_45px_rgba(0,0,0,0.22)] backdrop-blur-2xl lg:block"
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: [0, -10, 0] }}
-        transition={{ opacity: { duration: 0.7, delay: 1.1 }, y: { duration: 5, repeat: Infinity, ease: "easeInOut" } }}
-      >
-        Warm homes. Clear builds.
-      </motion.div>
-      <motion.div
-        aria-hidden="true"
-        className="absolute bottom-28 right-[16%] hidden rounded-full border border-white/18 bg-[#101c26]/42 px-5 py-3 text-sm font-semibold text-white/84 shadow-[0_18px_45px_rgba(0,0,0,0.22)] backdrop-blur-2xl xl:block"
-        initial={{ opacity: 0, y: 18 }}
-        animate={{ opacity: 1, y: [0, 12, 0] }}
-        transition={{ opacity: { duration: 0.7, delay: 1.3 }, y: { duration: 5.8, repeat: Infinity, ease: "easeInOut" } }}
-      >
-        Built around New Zealand living.
-      </motion.div>
 
       <div className="section-shell relative flex min-h-[calc(100vh-7rem)] items-center py-16">
-        <div className="max-w-4xl">
+        <div className="hero-content mx-auto max-w-[760px] px-6 text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -61,7 +43,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 34 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="font-serif-display text-5xl font-normal leading-[1.02] text-[#f8fafc] sm:text-6xl lg:text-7xl"
+            className="hero-title font-serif-display text-5xl font-normal leading-[1.02] text-[#f8fafc] sm:text-6xl lg:text-7xl"
           >
             Residential New Builds, Renovations & <span className="text-gradient">Extensions</span>
           </motion.h1>
@@ -69,7 +51,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-7 max-w-2xl text-lg leading-8 text-white/72 sm:text-xl"
+            className="hero-subtitle mx-auto mt-7 max-w-[620px] text-lg leading-8 text-white/72 sm:text-xl"
           >
             Reliable residential construction, renovation, and project management across New Zealand.
           </motion.p>
@@ -77,18 +59,18 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.8 }}
-            className="mt-9 flex flex-col gap-4 sm:flex-row"
+            className="hero-actions mt-7 flex flex-wrap items-center justify-center gap-4"
           >
             <a
               href="#contact"
-              className="hero-btn hero-btn-primary group inline-flex items-center justify-center gap-3 px-8 py-4 font-semibold text-white transition"
+              className="hero-btn hero-btn-primary group inline-flex items-center justify-center gap-3 px-7 py-4 font-semibold text-white transition"
             >
               Get a Quote
               <ArrowRight className="transition group-hover:translate-x-1" size={18} />
             </a>
             <a
               href="#services"
-              className="hero-btn inline-flex items-center justify-center px-8 py-4 font-semibold text-white transition"
+              className="hero-btn inline-flex items-center justify-center px-7 py-4 font-semibold text-white transition"
             >
               View Services
             </a>
