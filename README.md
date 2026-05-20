@@ -125,10 +125,10 @@ This is a static frontend application with no backend services, APIs, or databas
 ## Screenshots
 
 ### Homepage Hero Section
-<img src="./screenshots/homepage-hero.jpg" width="100%" alt="Homepage Hero Section" />
+<img src="./screenshots/about-services-section.jpg" width="100%" alt="Homepage Hero Section" />
 
 ### About & Services Section
-<img src="./screenshots/about-services-section.jpg" width="100%" alt="About and Services Section" />
+<img src="./screenshots/homepage-hero.jpg" width="100%" alt="About and Services Section" />
 
 ### Project Capabilities Section
 <img src="./screenshots/project-capabilities.jpg" width="100%" alt="Project Capabilities Grid" />
