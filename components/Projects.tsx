@@ -53,11 +53,11 @@ export default function Projects() {
           </p>
         </SectionHeading>
 
-        <div className="grid auto-rows-fr gap-5 md:grid-cols-2">
+        <div className="grid gap-5 md:auto-rows-[1fr] md:grid-cols-2 md:items-stretch">
           {projects.map((project, index) => (
-            <Reveal key={project.name} delay={index * 0.07} className="flex">
-              <article className="glass-card liquid-highlight group flex w-full flex-col overflow-hidden">
-                <div className="relative aspect-[16/9] overflow-hidden bg-[#0d1821]">
+            <Reveal key={project.name} delay={index * 0.07} className="flex h-full w-full">
+              <article className="glass-card liquid-highlight group flex w-full flex-col overflow-hidden md:h-[640px]">
+                <div className="relative h-[260px] shrink-0 overflow-hidden bg-[#0d1821]">
                   <Image
                     src={project.image}
                     alt={`${project.name} exterior residential construction image`}
