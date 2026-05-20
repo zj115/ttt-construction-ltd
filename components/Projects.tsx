@@ -53,17 +53,17 @@ export default function Projects() {
           </p>
         </SectionHeading>
 
-        <div className="grid gap-5 md:grid-cols-2 md:items-stretch">
+        <div className="grid auto-rows-fr gap-5 md:grid-cols-2">
           {projects.map((project, index) => (
-            <Reveal key={project.name} delay={index * 0.07} className="h-full">
-              <article className="glass-card liquid-highlight group flex h-full flex-col overflow-hidden">
-                <div className="relative aspect-[16/10] overflow-hidden bg-[#0d1821]">
+            <Reveal key={project.name} delay={index * 0.07} className="flex">
+              <article className="glass-card liquid-highlight group flex w-full flex-col overflow-hidden">
+                <div className="relative aspect-[16/9] overflow-hidden bg-[#0d1821]">
                   <Image
                     src={project.image}
                     alt={`${project.name} exterior residential construction image`}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transition duration-700 group-hover:scale-110"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#243126]/76 via-[#243126]/18 to-transparent" />
                   <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.18)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.09)_1px,transparent_1px)] bg-[size:42px_42px] opacity-0 mix-blend-screen transition duration-500 group-hover:opacity-55" />
@@ -71,23 +71,25 @@ export default function Projects() {
                   <div className="absolute bottom-6 left-6 right-16 h-px origin-left scale-x-0 bg-[#70d7ff] shadow-[0_0_28px_rgba(112,215,255,0.58)] transition duration-500 group-hover:scale-x-100" />
                   <ArrowUpRight className="absolute right-6 top-6 text-white opacity-70 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100" />
                 </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <div className="mb-4 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#f0b76c]">
-                    <span>{project.projectType}</span>
-                    <span className="text-white/34">/</span>
-                    <span>{project.location}</span>
+                <div className="flex flex-1 flex-col justify-between p-6">
+                  <div>
+                    <div className="mb-4 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#f0b76c]">
+                      <span>{project.projectType}</span>
+                      <span className="text-white/34">/</span>
+                      <span>{project.location}</span>
+                    </div>
+                    <h3 className="font-display text-2xl font-semibold text-white">{project.name}</h3>
+                    <div className="mt-5 grid gap-3 text-sm text-white/68">
+                      <p>
+                        <span className="font-semibold text-white">Typical Scope:</span> {project.scope}
+                      </p>
+                      <p>
+                        <span className="font-semibold text-white">Suitable For:</span>{" "}
+                        {project.suitableFor}
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="font-display text-2xl font-semibold text-white">{project.name}</h3>
-                  <div className="mt-5 grid gap-3 text-sm text-white/68">
-                    <p>
-                      <span className="font-semibold text-white">Typical Scope:</span> {project.scope}
-                    </p>
-                    <p>
-                      <span className="font-semibold text-white">Suitable For:</span>{" "}
-                      {project.suitableFor}
-                    </p>
-                  </div>
-                  <div className="mt-auto pt-5">
+                  <div className="min-h-[88px] pt-5">
                     <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#f0b76c]">
                       Key work included
                     </p>
