@@ -40,15 +40,14 @@ This is a commercial website project for TTT Construction Ltd, a residential con
 - **Scroll Animations** — Intersection Observer API with Framer Motion for reveal effects
 - **SEO Optimization** — Meta tags, Open Graph protocol, and semantic HTML
 - **Contact Form** — Client inquiry form with validation
-- **Reusable Components** — Modular component architecture for maintainability
 
 ## Architecture
 
 ### Frontend Structure
 - **App Router** — Next.js 13+ file-based routing system
-- **Static Site Generation (SSG)** — All pages pre-rendered at build time for optimal performance
+- **Static Site Generation (SSG)** — All pages pre-rendered at build time
 - **Component Architecture** — Reusable React components with TypeScript interfaces
-- **Data Layer** — Centralized project data in `lib/data/projects.ts` with TypeScript types
+- **Data Layer** — Centralized project data in `lib/data/projects.ts`
 
 ### Routing
 - `/` — Homepage with hero, about, services, projects, and contact sections
@@ -68,12 +67,6 @@ ttt-construction-ltd/
 │       └── page.tsx            # Dynamic project detail pages
 ├── components/
 │   ├── project-detail/         # Project page components
-│   │   ├── ProjectHero.tsx
-│   │   ├── ProjectOverview.tsx
-│   │   ├── ProjectTimeline.tsx
-│   │   ├── ProjectGallery.tsx
-│   │   ├── ProjectMaterials.tsx
-│   │   └── ProjectCTA.tsx
 │   ├── Hero.tsx                # Homepage hero section
 │   ├── About.tsx               # About section
 │   ├── Services.tsx            # Services grid
@@ -89,9 +82,8 @@ ttt-construction-ltd/
 ├── public/
 │   └── images/                 # Static image assets
 ├── screenshots/                # Project screenshots for README
-├── styles/
-│   └── globals.css             # Global styles and Tailwind config
-└── README.md
+└── styles/
+    └── globals.css             # Global styles and Tailwind config
 ```
 
 ## Installation and Setup
@@ -133,10 +125,10 @@ This is a static frontend application with no backend services, APIs, or databas
 ## Screenshots
 
 ### Homepage Hero Section
-<img src="./screenshots/homepage-hero.jpg" width="100%" alt="Homepage Hero Section" />
+<img src="./screenshots/about-services-section.jpg" width="100%" alt="Homepage Hero Section" />
 
 ### About & Services Section
-<img src="./screenshots/about-services-section.jpg" width="100%" alt="About and Services Section" />
+<img src="./screenshots/homepage-hero.jpg" width="100%" alt="About and Services Section" />
 
 ### Project Capabilities Section
 <img src="./screenshots/project-capabilities.jpg" width="100%" alt="Project Capabilities Grid" />
@@ -162,7 +154,6 @@ I built this entire project from scratch as a commercial website for a New Zeala
 - ✅ No API keys, database credentials, or secrets in the codebase
 - ✅ `.gitignore` properly configured to exclude sensitive files
 - ✅ All screenshots use publicly available demo content
-- ✅ Environment variables are not required for this static site
 
 This project is safe to share publicly as part of my portfolio.
 
@@ -173,12 +164,6 @@ This project is safe to share publicly as part of my portfolio.
 - Add a blog section for construction tips and company updates
 - Integrate Google Analytics for traffic monitoring
 - Add more project case studies with real construction photos
-
-## Notes
-
-- This repository is shared for portfolio and demonstration purposes
-- The project showcases modern frontend development practices suitable for commercial websites
-- Some business details may be simplified or anonymized for privacy
 
 ## License
 
