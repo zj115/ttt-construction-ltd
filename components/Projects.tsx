@@ -1,46 +1,9 @@
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
-
-const projects = [
-  {
-    name: "Residential New Build",
-    projectType: "Capability Type: New Build",
-    scope: "Site preparation, foundations, framing, exterior envelope, interior finishing, and handover planning",
-    suitableFor: "Homeowners planning a detached home or lifestyle property",
-    location: "New Zealand",
-    keyWork: ["Foundations", "Timber framing", "Envelope coordination", "Handover checks"],
-    image: "/images/modern-detached-home.jpg"
-  },
-  {
-    name: "Home Renovation",
-    projectType: "Capability Type: Renovation",
-    scope: "Layout improvements, room upgrades, kitchen and bathroom works, finish detailing, and staged delivery",
-    suitableFor: "Owners improving comfort, functionality, and long-term value",
-    location: "New Zealand",
-    keyWork: ["Site protection", "Preparation", "Interior upgrades", "Finish detailing"],
-    image: "/images/luxury-suburban-home.jpg"
-  },
-  {
-    name: "Extension Project",
-    projectType: "Capability Type: Extension",
-    scope: "Added living areas, bedrooms, garages, structural openings, tie-ins, and exterior completion",
-    suitableFor: "Families needing more usable space without moving",
-    location: "New Zealand",
-    keyWork: ["Buildability review", "Structural coordination", "Weatherproofing"],
-    image: "/images/rural-single-family-home.jpg"
-  },
-  {
-    name: "Commercial Interior Fit-out",
-    projectType: "Capability Type: Fit-out",
-    scope: "Interior preparation, linings, fixtures, finishing works, trade coordination, and practical close-out",
-    suitableFor: "Small commercial spaces needing tidy construction delivery",
-    location: "New Zealand",
-    keyWork: ["Trade sequencing", "Fit-out coordination", "Materials staging", "Quality review"],
-    image: "/images/residential-construction-site.jpg"
-  }
-];
+import { projects } from "@/lib/data/projects";
 
 export default function Projects() {
   return (
@@ -56,7 +19,8 @@ export default function Projects() {
         <div className="grid gap-5 md:grid-cols-2">
           {projects.map((project, index) => (
             <Reveal key={project.name} delay={index * 0.07} className="h-auto md:h-[640px]">
-              <article className="glass-card liquid-highlight group flex h-full w-full flex-col overflow-hidden">
+              <Link href={`/projects/${project.slug}`}>
+                <article className="glass-card liquid-highlight group flex h-full w-full cursor-pointer flex-col overflow-hidden">
                 <div className="relative h-[280px] shrink-0 overflow-hidden bg-[#0d1821]">
                   <Image
                     src={project.image}
@@ -103,6 +67,7 @@ export default function Projects() {
                   </div>
                 </div>
               </article>
+              </Link>
             </Reveal>
           ))}
         </div>
