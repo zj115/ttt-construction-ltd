@@ -168,10 +168,3 @@ This project is safe to share publicly as part of my portfolio.
 ## License
 
 This repository is shared for portfolio and demonstration purposes only. Commercial reuse is not permitted without permission.
-
----
-
-**Developer:** Zicong Jiang  
-**Education:** Master of Information Technology, University of Waikato  
-**Year:** 2025  
-**GitHub:** [github.com/zj115](https://github.com/zj115)
