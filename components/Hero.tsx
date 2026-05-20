@@ -29,12 +29,12 @@ export default function Hero() {
       />
 
       <div className="section-shell relative flex min-h-[calc(100vh-7rem)] items-center py-16">
-        <div className="hero-content mx-auto max-w-[760px] px-6 text-center">
+        <div className="hero-content">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="glass-panel mb-5 inline-flex items-center gap-3 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#d8b57a]"
+            className="hero-eyebrow glass-panel mb-5 inline-flex items-center gap-3 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#d8b57a]"
           >
             <span className="h-2 w-2 rounded-full bg-[#d8b57a] shadow-[0_0_18px_rgba(216,181,122,0.65)]" />
             New Zealand Construction
@@ -51,7 +51,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="hero-subtitle mx-auto mt-7 max-w-[620px] text-lg leading-8 text-white/72 sm:text-xl"
+            className="hero-subtitle mt-7 text-lg leading-8 text-white/72 sm:text-xl"
           >
             Reliable residential construction, renovation, and project management across New Zealand.
           </motion.p>
@@ -59,18 +59,18 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.8 }}
-            className="hero-actions mt-7 flex flex-wrap items-center justify-center gap-4"
+            className="hero-actions"
           >
             <a
               href="#contact"
-              className="hero-btn hero-btn-primary group inline-flex items-center justify-center gap-3 px-7 py-4 font-semibold text-white transition"
+              className="hero-btn hero-btn-primary group inline-flex items-center justify-center gap-3"
             >
               Get a Quote
               <ArrowRight className="transition group-hover:translate-x-1" size={18} />
             </a>
             <a
               href="#services"
-              className="hero-btn inline-flex items-center justify-center px-7 py-4 font-semibold text-white transition"
+              className="hero-btn inline-flex items-center justify-center"
             >
               View Services
             </a>
