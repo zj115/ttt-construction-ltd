@@ -19,8 +19,8 @@ This is a commercial website project for TTT Construction Ltd, a residential con
 ## Tech Stack
 
 ### Frontend
-- **Next.js 16** — React framework with App Router for SSR and SSG
-- **React 19** — Component-based UI library
+- **Next.js** — React framework with App Router for SSR and SSG
+- **React** — Component-based UI library
 - **TypeScript** — Type-safe development
 - **Tailwind CSS** — Utility-first CSS framework
 - **Framer Motion** — Animation library for scroll effects and transitions
@@ -36,7 +36,7 @@ This is a commercial website project for TTT Construction Ltd, a residential con
 
 - **Dynamic Project Pages** — `/projects/[slug]` routes with static generation at build time
 - **Responsive Design** — Mobile-first approach with tablet and desktop breakpoints
-- **Glass Morphism UI** — Modern frosted glass aesthetic with backdrop blur effects
+- **Modern Glass-Style Interface** — Responsive layouts with subtle visual effects
 - **Scroll Animations** — Intersection Observer API with Framer Motion for reveal effects
 - **SEO Optimization** — Meta tags, Open Graph protocol, and semantic HTML
 - **Contact Form** — Client inquiry form with validation
@@ -154,8 +154,6 @@ I built this entire project from scratch as a commercial website for a New Zeala
 - ✅ No API keys, database credentials, or secrets in the codebase
 - ✅ `.gitignore` properly configured to exclude sensitive files
 - ✅ All screenshots use publicly available demo content
-
-This project is safe to share publicly as part of my portfolio.
 
 ## Future Improvements
 
