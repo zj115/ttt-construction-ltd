@@ -58,8 +58,8 @@ export default function Services() {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Reveal key={service.title} delay={index * 0.05} className="h-full w-full">
-                <div className="soft-card glow-border group flex h-auto w-full flex-col p-6 transition duration-300 hover:-translate-y-2 md:h-[280px]">
+              <Reveal key={service.title} delay={index * 0.05} className="h-auto md:h-[280px]">
+                <div className="soft-card glow-border group flex h-full w-full flex-col p-6 transition duration-300 hover:-translate-y-2">
                   <div className="mb-8 flex items-center justify-between">
                     <span className="grid h-14 w-14 place-items-center border border-[#8fa58d]/40 bg-[#8fa58d]/16 text-[#2f4a39] transition group-hover:border-[#b87943]/50 group-hover:shadow-[0_18px_30px_rgba(184,121,67,0.14)]">
                       <Icon size={25} />
