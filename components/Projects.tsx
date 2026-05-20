@@ -53,11 +53,11 @@ export default function Projects() {
           </p>
         </SectionHeading>
 
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2 md:items-stretch">
           {projects.map((project, index) => (
             <Reveal key={project.name} delay={index * 0.07}>
-              <article className="glass-card liquid-highlight group overflow-hidden">
-                <div className="relative h-72 overflow-hidden bg-[#0d1821]">
+              <article className="glass-card liquid-highlight group flex h-full flex-col overflow-hidden">
+                <div className="relative aspect-[16/10] overflow-hidden bg-[#0d1821]">
                   <Image
                     src={project.image}
                     alt={`${project.name} exterior residential construction image`}
@@ -71,7 +71,7 @@ export default function Projects() {
                   <div className="absolute bottom-6 left-6 right-16 h-px origin-left scale-x-0 bg-[#70d7ff] shadow-[0_0_28px_rgba(112,215,255,0.58)] transition duration-500 group-hover:scale-x-100" />
                   <ArrowUpRight className="absolute right-6 top-6 text-white opacity-70 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100" />
                 </div>
-                <div className="p-6">
+                <div className="flex flex-1 flex-col p-6">
                   <div className="mb-4 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#f0b76c]">
                     <span>{project.projectType}</span>
                     <span className="text-white/34">/</span>
@@ -87,7 +87,7 @@ export default function Projects() {
                       {project.suitableFor}
                     </p>
                   </div>
-                  <div className="mt-5">
+                  <div className="mt-auto pt-5">
                     <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#f0b76c]">
                       Key work included
                     </p>
