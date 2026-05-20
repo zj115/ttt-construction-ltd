@@ -28,7 +28,7 @@ const projects = [
     scope: "Added living areas, bedrooms, garages, structural openings, tie-ins, and exterior completion",
     suitableFor: "Families needing more usable space without moving",
     location: "New Zealand",
-    keyWork: ["Buildability review", "Structural coordination", "Weatherproofing", "Exterior works"],
+    keyWork: ["Buildability review", "Structural coordination", "Weatherproofing"],
     image: "/images/rural-single-family-home.jpg"
   },
   {
