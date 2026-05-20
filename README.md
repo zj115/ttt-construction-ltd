@@ -1,169 +1,174 @@
 # TTT Construction Ltd — Company Website
 
-A responsive company website built for a residential construction business in New Zealand. Built with Next.js, React, TypeScript, and Tailwind CSS.
+A full-stack web application built for a New Zealand construction company, featuring dynamic project pages, responsive design, and modern UI interactions.
 
-## Live Demo
+**Live Demo:** [https://ttt-construction-ltd.vercel.app](https://ttt-construction-ltd.vercel.app)
 
-🔗 **Deployed on Vercel:** [View Live Site](https://ttt-construction-ltd.vercel.app)
+## Screenshots
 
-## Overview
+### Homepage Hero Section
+![Homepage Hero](screenshots/homepage-hero.jpg)
 
-This is a single-page application showcasing a construction company's services, projects, and contact information. The site includes responsive layouts, animated sections, and a clean glass-style interface suitable for clients browsing on any device.
+### About & Services
+![About and Services](screenshots/about-services-section.jpg)
 
-The project uses component-based architecture, TypeScript for type safety, and Next.js App Router for optimized performance.
+### Project Capabilities
+![Project Capabilities](screenshots/project-capabilities.jpg)
 
 ## Tech Stack
 
 ### Frontend
-- **Next.js** - React framework with App Router
-- **React** - UI component library
-- **TypeScript** - Type-safe JavaScript
-- **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Animation library
-- **lucide-react** - Icon library
+- **Next.js 16** — React framework with App Router for server-side rendering and static generation
+- **React 19** — Component-based UI library
+- **TypeScript** — Type-safe development
+- **Tailwind CSS** — Utility-first CSS framework for responsive design
+- **Framer Motion** — Animation library for smooth transitions and interactions
 
-### Fonts
-- **Inter** - Body text
-- **Space Grotesk** - Headings
-- **Instrument Serif** - Accent text
+### Development Tools
+- **ESLint** — Code linting and quality checks
+- **PostCSS** — CSS processing and optimization
+- **Vercel** — Deployment platform with automatic CI/CD
 
-### Deployment
-- **Vercel** - Hosting and continuous deployment
+## Key Features
 
-## Features
-
-- **Responsive Design** - Mobile-first approach, works on all screen sizes
-- **Smooth Animations** - Scroll-triggered animations using Framer Motion
-- **Glass Morphism UI** - Clean glass-style design aesthetic
-- **SEO Optimized** - Proper metadata and Open Graph tags
-- **Component-Based Architecture** - Modular, reusable React components
-- **Type Safety** - Full TypeScript implementation
-- **Contact Form** - Interactive form for client inquiries
-- **Project Gallery** - Showcase of completed construction projects
-- **Service Sections** - Detailed breakdown of construction services offered
+- **Dynamic Routing** — `/projects/[slug]` pages generated at build time using Next.js App Router
+- **Static Site Generation (SSG)** — All pages pre-rendered for optimal performance
+- **Responsive Design** — Mobile-first approach with breakpoints for tablet and desktop
+- **Glass Morphism UI** — Modern frosted glass aesthetic with backdrop blur effects
+- **Scroll Animations** — Intersection Observer API with Framer Motion for reveal effects
+- **SEO Optimized** — Meta tags, Open Graph, and semantic HTML structure
+- **Type Safety** — Full TypeScript coverage across components and data layers
 
 ## Project Structure
 
 ```
 ttt-construction-ltd/
-├── app/
-│   ├── layout.tsx          # Root layout with fonts and metadata
-│   ├── page.tsx            # Main homepage composition
-│   └── globals.css         # Global styles and Tailwind config
-├── components/
-│   ├── Navbar.tsx          # Navigation bar with smooth scroll
-│   ├── Hero.tsx            # Landing section with CTA
-│   ├── About.tsx           # Company introduction
-│   ├── Services.tsx        # Service offerings
-│   ├── Projects.tsx        # Project gallery
-│   ├── Process.tsx         # Construction process timeline
-│   ├── Contact.tsx         # Contact form
-│   ├── Footer.tsx          # Footer with links
-│   └── ...                 # 14 additional components
+├── app/                          # Next.js App Router
+│   ├── layout.tsx               # Root layout with metadata
+│   ├── page.tsx                 # Homepage
+│   └── projects/[slug]/         # Dynamic project detail pages
+│       └── page.tsx
+├── components/                   # React components
+│   ├── project-detail/          # Project page components
+│   │   ├── ProjectHero.tsx
+│   │   ├── ProjectOverview.tsx
+│   │   ├── ProjectTimeline.tsx
+│   │   ├── ProjectGallery.tsx
+│   │   ├── ProjectMaterials.tsx
+│   │   └── ProjectCTA.tsx
+│   ├── Hero.tsx                 # Homepage hero section
+│   ├── About.tsx                # About section
+│   ├── Services.tsx             # Services grid
+│   ├── Projects.tsx             # Project capabilities grid
+│   ├── Contact.tsx              # Contact form
+│   ├── Navbar.tsx               # Navigation bar
+│   ├── Footer.tsx               # Footer component
+│   ├── Reveal.tsx               # Scroll reveal wrapper
+│   └── SectionHeading.tsx       # Reusable section heading
+├── lib/
+│   └── data/
+│       └── projects.ts          # Centralized project data with TypeScript interfaces
 ├── public/
-│   ├── images/             # Construction project images
-│   └── videos/             # Video assets
-├── .gitignore              # Git ignore rules
-├── package.json            # Dependencies and scripts
-├── tsconfig.json           # TypeScript configuration
-├── next.config.ts          # Next.js configuration
-└── README.md               # Project documentation
+│   └── images/                  # Static assets
+└── styles/
+    └── globals.css              # Global styles and Tailwind config
+
 ```
 
-## Installation & Setup
+## Component Architecture
 
-### Prerequisites
-- Node.js 18+ and npm installed
-- Git installed
+| Component | Purpose | Key Technologies |
+|-----------|---------|------------------|
+| `Hero` | Landing section with CTA | Framer Motion, Tailwind animations |
+| `About` | Company introduction | Glass morphism cards, responsive grid |
+| `Services` | Service offerings grid | Lucide icons, hover effects |
+| `Projects` | Project capabilities with links | Next.js Link, dynamic routing |
+| `Contact` | Contact form | Form validation, responsive layout |
+| `Navbar` | Navigation with mobile menu | React state, smooth scroll |
+| `Reveal` | Scroll-triggered animations | Intersection Observer, Framer Motion |
+| `ProjectHero` | Detail page hero | Next.js Image, gradient overlays |
+| `ProjectTimeline` | Construction phases | Structured data display |
 
-### Local Development
+## Data Layer
 
-1. Clone the repository:
+The project uses a centralized data architecture in `lib/data/projects.ts`:
+
+```typescript
+interface Project {
+  slug: string;
+  name: string;
+  projectType: string;
+  scope: string;
+  suitableFor: string;
+  location: string;
+  keyWork: string[];
+  image: string;
+  detailPage: ProjectDetail;
+}
+```
+
+This approach provides:
+- Single source of truth for project data
+- Type safety with TypeScript interfaces
+- Easy content updates without touching component code
+- Scalable structure for adding new projects
+
+## Installation
+
 ```bash
+# Clone the repository
 git clone https://github.com/zj115/ttt-construction-ltd.git
 cd ttt-construction-ltd
-```
 
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-```
 
-3. Run the development server:
-```bash
+# Run development server
 npm run dev
 ```
 
-4. Open your browser and navigate to:
-```
-http://localhost:3000
-```
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-### Production Build
-
-To create an optimized production build:
+## Build & Deploy
 
 ```bash
+# Create production build
 npm run build
-npm run start
+
+# Start production server
+npm start
 ```
 
-The build output will be in the `.next` folder.
+The project is configured for automatic deployment on Vercel. Every push to the `main` branch triggers a new deployment.
 
-## Deployment
+## Development Workflow
 
-This project is configured for Vercel deployment:
+1. **Local Development** — `npm run dev` starts the Next.js development server with hot reload
+2. **Type Checking** — TypeScript checks run automatically during build
+3. **Linting** — ESLint enforces code quality standards
+4. **Build Verification** — `npm run build` validates all pages compile correctly
+5. **Git Commit** — Changes committed with descriptive messages
+6. **Automatic Deployment** — Vercel deploys on push to main branch
 
-1. Push your code to GitHub
-2. Import the repository in Vercel
-3. Vercel will automatically detect Next.js and configure the build settings
-4. Deploy with default settings (no environment variables required)
+## Technical Highlights
 
-The site will be live at your Vercel-provided URL.
+### Performance
+- Static generation for instant page loads
+- Image optimization with Next.js Image component
+- CSS-in-JS with Tailwind for minimal bundle size
+- Lazy loading for images and components
 
-## Component Overview
+### Code Quality
+- TypeScript for type safety and better IDE support
+- Component-based architecture for reusability
+- Centralized data layer separating content from presentation
+- Consistent naming conventions and file structure
 
-The application is built with modular, reusable components:
-
-| Component | Purpose |
-|-----------|---------|
-| `Navbar` | Sticky navigation with smooth scroll links |
-| `Hero` | Landing section with video background |
-| `About` | Company background and mission |
-| `Services` | Construction services offered |
-| `TrustBar` | Trust indicators and certifications |
-| `HomeBuildScope` | Scope of home building services |
-| `Projects` | Gallery of completed projects |
-| `Process` | Step-by-step construction process |
-| `QuotationProcess` | How to get a quote |
-| `Specifications` | Build specifications and standards |
-| `BuildPlanning` | Planning and design services |
-| `PaymentSchedule` | Payment terms and milestones |
-| `Handover` | Project completion and handover process |
-| `WhyChooseUs` | Company differentiators |
-| `Testimonials` | Client reviews and feedback |
-| `FAQ` | Frequently asked questions |
-| `Contact` | Contact form and information |
-| `Footer` | Site footer with links |
-
-## Screenshots
-
-### Desktop View
-![Homepage Hero](./public/screenshots/homepage-hero.png)
-![Services Section](./public/screenshots/services.png)
-
-### Mobile View
-![Mobile Responsive](./public/screenshots/mobile-view.png)
-
-*Screenshots to be added*
-
-## Design
-
-The UI uses a dark glass-style theme with subtle animations and responsive layouts to create a clean and modern browsing experience.
-
-## My Contribution
-
-I developed this project from scratch, including the component architecture, responsive layouts, animations, TypeScript implementation, SEO optimization, and Vercel deployment setup.
+### User Experience
+- Smooth scroll animations with Framer Motion
+- Responsive design tested across devices
+- Accessible navigation and semantic HTML
+- Fast page transitions with Next.js routing
 
 ## Browser Support
 
@@ -171,38 +176,21 @@ I developed this project from scratch, including the component architecture, res
 - Firefox (latest)
 - Safari (latest)
 - Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## Performance
-
-Built with performance-focused practices using Next.js App Router and optimized assets.
-
-## Future Improvements
-
-- Add a blog section for construction tips and updates
-- Implement a project management dashboard for clients
-- Add multi-language support (English/Māori)
-- Integrate a CMS for easier content updates
-- Add backend API for form submissions with email notifications
-- Implement analytics tracking (Google Analytics)
-
-## Notes
-
-This repository is shared for portfolio and demonstration purposes.
 
 ## Security & Privacy
 
-- No production credentials or environment variables are included in this repository
-- Sensitive business information has been removed
-- The project uses environment-based configuration for deployment
-- Public assets are used for demonstration purposes only
+- No sensitive data stored in repository
+- Environment variables properly configured
+- No API keys or credentials in codebase
+- Client-side only application (no backend)
 
 ## License
 
-This repository is shared for portfolio and demonstration purposes only.
+This project is a portfolio demonstration piece.
 
 ---
 
-**Developed by:** Zicong Jiang  
-**GitHub:** [@zj115](https://github.com/zj115)  
-
+**Built by:** Zicong Jiang  
+**Institution:** MIT (Manukau Institute of Technology)  
+**Program:** Bachelor of Information Technology  
+**Year:** 2025
