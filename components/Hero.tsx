@@ -28,8 +28,8 @@ export default function Hero() {
         transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
       />
 
-      <div className="section-shell relative flex min-h-[calc(100vh-7rem)] items-center py-16">
-        <div className="hero-content">
+      <div className="section-shell relative flex min-h-[calc(100vh-7rem)] items-center justify-center py-16">
+        <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="hero-subtitle mt-7 text-lg leading-8 text-white/72 sm:text-xl"
+            className="hero-subtitle mt-7 max-w-2xl text-center text-lg leading-8 text-white/72 sm:text-xl"
           >
             Reliable residential construction, renovation, and project management across New Zealand.
           </motion.p>
@@ -59,7 +59,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, delay: 0.8 }}
-            className="hero-actions"
+            className="mt-9 flex w-full flex-col items-center justify-center gap-4 sm:flex-row"
           >
             <a
               href="#contact"

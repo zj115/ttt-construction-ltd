@@ -49,8 +49,8 @@ export default function Navbar() {
         }`}
       >
         <a href="#home" className="group flex items-center gap-3" aria-label="TTT Construction Ltd home">
-          <span className="logo-mark border border-white/28 bg-gradient-to-br from-white/24 to-white/7 font-display font-bold text-white shadow-lg backdrop-blur-xl">
-            <span>TTT</span>
+          <span className="logo-mark">
+            TTT
           </span>
           <span className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-white sm:text-base">
             Construction Ltd
