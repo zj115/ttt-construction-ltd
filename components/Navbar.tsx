@@ -76,7 +76,7 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="hero-btn hidden px-5 py-3 text-sm font-semibold text-white transition lg:inline-flex"
+          className="nav-quote-btn hidden lg:inline-flex"
         >
           Get a Quote
         </a>
