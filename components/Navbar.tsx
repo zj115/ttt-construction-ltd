@@ -44,8 +44,8 @@ export default function Navbar() {
       <nav
         className={`section-shell flex h-16 items-center justify-between rounded-full border px-3 shadow-2xl transition-all duration-300 sm:h-[4.5rem] sm:px-4 ${
           scrolled
-            ? "border-white/18 bg-[#08131d]/68 shadow-black/30 backdrop-blur-xl"
-            : "border-white/12 bg-[#08131d]/32 shadow-black/10 backdrop-blur-lg"
+            ? "border-white/20 bg-[#101c26]/68 shadow-black/30 backdrop-blur-xl"
+            : "border-white/14 bg-[#101c26]/32 shadow-black/10 backdrop-blur-lg"
         }`}
       >
         <a href="#home" className="group flex items-center gap-3" aria-label="TTT Construction Ltd home">
@@ -62,11 +62,11 @@ export default function Navbar() {
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="group relative text-sm font-medium text-white/58 transition hover:text-white"
+              className="group relative text-sm font-medium text-white/60 transition hover:text-white"
             >
               {link}
               <span
-                className={`absolute -bottom-3 left-1/2 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-[#70d7ff] shadow-[0_0_16px_rgba(112,215,255,0.85)] transition ${
+                className={`absolute -bottom-3 left-1/2 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-[#8eebff] shadow-[0_0_16px_rgba(142,235,255,0.85)] transition ${
                   active === link ? "scale-100 opacity-100" : "scale-0 opacity-0"
                 }`}
               />

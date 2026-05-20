@@ -17,10 +17,10 @@ export default function Hero() {
       >
         <source src="/videos/detached-home-build.mp4" type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-gradient-to-r from-[#071017]/90 via-[#071017]/66 to-[#071017]/26" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#071017] via-[#071017]/18 to-[#0f1b24]/28" />
-      <div className="beam left-[-10rem] top-28 bg-[#70d7ff]" />
-      <div className="beam bottom-10 right-[-12rem] bg-[#f0b76c]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#071018]/88 via-[#101c26]/62 to-[#071018]/24" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#071018] via-[#071018]/16 to-[#101c26]/26" />
+      <div className="beam left-[-10rem] top-28 bg-[#8eebff]" />
+      <div className="beam bottom-10 right-[-12rem] bg-[#d8b57a]" />
       <motion.div
         aria-hidden="true"
         className="grid-bg absolute inset-0"
@@ -29,7 +29,7 @@ export default function Hero() {
       />
       <motion.div
         aria-hidden="true"
-        className="absolute right-[8%] top-32 hidden rounded-full border border-white/16 bg-[#08131d]/44 px-5 py-3 text-sm font-semibold text-white/84 shadow-[0_18px_45px_rgba(0,0,0,0.22)] backdrop-blur-2xl lg:block"
+        className="absolute right-[8%] top-32 hidden rounded-full border border-white/18 bg-[#101c26]/44 px-5 py-3 text-sm font-semibold text-white/84 shadow-[0_18px_45px_rgba(0,0,0,0.22)] backdrop-blur-2xl lg:block"
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: [0, -10, 0] }}
         transition={{ opacity: { duration: 0.7, delay: 1.1 }, y: { duration: 5, repeat: Infinity, ease: "easeInOut" } }}
@@ -38,7 +38,7 @@ export default function Hero() {
       </motion.div>
       <motion.div
         aria-hidden="true"
-        className="absolute bottom-28 right-[16%] hidden rounded-full border border-white/16 bg-[#08131d]/42 px-5 py-3 text-sm font-semibold text-white/84 shadow-[0_18px_45px_rgba(0,0,0,0.22)] backdrop-blur-2xl xl:block"
+        className="absolute bottom-28 right-[16%] hidden rounded-full border border-white/18 bg-[#101c26]/42 px-5 py-3 text-sm font-semibold text-white/84 shadow-[0_18px_45px_rgba(0,0,0,0.22)] backdrop-blur-2xl xl:block"
         initial={{ opacity: 0, y: 18 }}
         animate={{ opacity: 1, y: [0, 12, 0] }}
         transition={{ opacity: { duration: 0.7, delay: 1.3 }, y: { duration: 5.8, repeat: Infinity, ease: "easeInOut" } }}
@@ -52,18 +52,18 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="glass-panel mb-5 inline-flex items-center gap-3 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#f0b76c]"
+            className="glass-panel mb-5 inline-flex items-center gap-3 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#d8b57a]"
           >
-            <span className="h-2 w-2 rounded-full bg-[#f0b76c] shadow-[0_0_18px_rgba(240,183,108,0.65)]" />
+            <span className="h-2 w-2 rounded-full bg-[#d8b57a] shadow-[0_0_18px_rgba(216,181,122,0.65)]" />
             New Zealand Construction
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 34 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="font-serif-display text-5xl font-normal leading-[1.02] text-[#f7fbff] sm:text-6xl lg:text-7xl"
+            className="font-serif-display text-5xl font-normal leading-[1.02] text-[#f8fafc] sm:text-6xl lg:text-7xl"
           >
-            Residential New Builds, Renovations & <span className="text-gradient">Extensions in New Zealand</span>
+            Residential New Builds, Renovations & <span className="text-gradient">Extensions</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 28 }}
