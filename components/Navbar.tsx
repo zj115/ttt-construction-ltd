@@ -44,12 +44,12 @@ export default function Navbar() {
       <nav
         className={`section-shell flex h-16 items-center justify-between rounded-full border px-3 shadow-2xl transition-all duration-300 sm:h-[4.5rem] sm:px-4 ${
           scrolled
-            ? "border-white/16 bg-[#08131d]/72 shadow-black/30 backdrop-blur-2xl"
-            : "border-white/10 bg-[#08131d]/38 shadow-black/10 backdrop-blur-xl"
+            ? "border-white/18 bg-[#08131d]/68 shadow-black/30 backdrop-blur-xl"
+            : "border-white/12 bg-[#08131d]/32 shadow-black/10 backdrop-blur-lg"
         }`}
       >
         <a href="#home" className="group flex items-center gap-3" aria-label="TTT Construction Ltd home">
-          <span className="liquid-glass grid h-11 w-11 place-items-center font-display text-sm font-bold text-white">
+          <span className="hero-btn grid h-11 w-11 place-items-center font-display text-sm font-bold text-white">
             TTT
           </span>
           <span className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-white sm:text-base">
@@ -57,12 +57,12 @@ export default function Navbar() {
           </span>
         </a>
 
-        <div className="hidden items-center gap-8 lg:flex">
+        <div className="hidden items-center gap-6 lg:flex">
           {links.map((link) => (
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="group relative text-sm font-medium text-white/62 transition hover:text-white"
+              className="group relative text-sm font-medium text-white/58 transition hover:text-white"
             >
               {link}
               <span
@@ -76,7 +76,7 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="liquid-glass hidden px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 lg:inline-flex"
+          className="hero-btn hidden px-5 py-3 text-sm font-semibold text-white transition lg:inline-flex"
         >
           Get a Quote
         </a>
@@ -85,7 +85,7 @@ export default function Navbar() {
           type="button"
           aria-label="Toggle menu"
           onClick={() => setOpen((value) => !value)}
-          className="liquid-glass grid h-11 w-11 place-items-center text-white lg:hidden"
+          className="hero-btn grid h-11 w-11 place-items-center text-white lg:hidden"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>

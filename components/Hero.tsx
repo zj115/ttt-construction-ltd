@@ -1,9 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Hammer, House, ShieldCheck } from "lucide-react";
-
-const heroServices = ["New Builds", "Renovations", "Extensions", "Project Management"];
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -73,21 +71,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-7 max-w-2xl text-lg leading-8 text-white/72 sm:text-xl"
           >
-            TTT Construction Ltd supports homeowners with reliable construction planning, clear
-            communication, quality workmanship, and residential project management.
+            Reliable residential construction, renovation, and project management across New Zealand.
           </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, delay: 0.72 }}
-            className="mt-5 flex flex-wrap gap-3 text-sm font-semibold text-white/82"
-          >
-            {heroServices.map((service) => (
-              <span key={service} className="glass-panel rounded-full px-4 py-2">
-                {service}
-              </span>
-            ))}
-          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -96,48 +81,17 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="liquid-glass group inline-flex items-center justify-center gap-3 px-8 py-4 font-semibold text-white transition hover:-translate-y-1"
+              className="hero-btn hero-btn-primary group inline-flex items-center justify-center gap-3 px-8 py-4 font-semibold text-white transition"
             >
               Get a Quote
               <ArrowRight className="transition group-hover:translate-x-1" size={18} />
             </a>
             <a
               href="#services"
-              className="liquid-glass inline-flex items-center justify-center px-8 py-4 font-semibold text-white transition hover:-translate-y-1"
+              className="hero-btn inline-flex items-center justify-center px-8 py-4 font-semibold text-white transition"
             >
               View Services
             </a>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, delay: 1 }}
-            className="mt-10 grid max-w-2xl gap-3 sm:grid-cols-2"
-          >
-            <motion.div whileHover={{ y: -6, scale: 1.01 }} className="liquid-glass liquid-panel p-4">
-              <House className="mb-3 text-[#f0b76c]" size={23} />
-              <p className="font-display text-lg font-semibold text-white">Detached Homes</p>
-              <p className="mt-1 text-sm text-white/66">New builds, extensions, and renovations.</p>
-            </motion.div>
-            <motion.div whileHover={{ y: -6, scale: 1.01 }} className="liquid-glass liquid-panel p-4">
-              <ShieldCheck className="mb-3 text-[#f0b76c]" size={23} />
-              <p className="font-display text-lg font-semibold text-white">Reliable Handover</p>
-              <p className="mt-1 text-sm text-white/66">Clear communication and quality checks.</p>
-            </motion.div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, delay: 1.15 }}
-            className="mt-5 flex flex-wrap gap-3 text-sm font-medium text-white/72"
-          >
-            {["Concept advice", "Fixed-scope quoting", "Trade coordination", "Quality checks"].map((item) => (
-              <span key={item} className="glass-panel inline-flex items-center gap-2 rounded-full px-4 py-2">
-                <Hammer size={15} className="text-[#f0b76c]" />
-                {item}
-              </span>
-            ))}
           </motion.div>
         </div>
       </div>
