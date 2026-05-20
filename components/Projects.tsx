@@ -55,7 +55,7 @@ export default function Projects() {
 
         <div className="grid gap-5 md:grid-cols-2 md:items-stretch">
           {projects.map((project, index) => (
-            <Reveal key={project.name} delay={index * 0.07}>
+            <Reveal key={project.name} delay={index * 0.07} className="h-full">
               <article className="glass-card liquid-highlight group flex h-full flex-col overflow-hidden">
                 <div className="relative aspect-[16/10] overflow-hidden bg-[#0d1821]">
                   <Image
