@@ -1,168 +1,111 @@
 # TTT Construction Ltd — Company Website
 
-A responsive company website built for a New Zealand residential construction business, featuring dynamic project pages, modern UI design, and smooth animations.
+A modern company website built for a residential construction business in New Zealand. The site introduces the company, walks through its service areas, and shows representative project capabilities.
 
-## Live Demo
-
-**🔗 [https://ttt-construction-ltd.vercel.app](https://ttt-construction-ltd.vercel.app)**
+**Live site:** https://ttt-construction-ltd.vercel.app
 
 ## Overview
 
-This is a commercial website project for TTT Construction Ltd, a residential construction company based in New Zealand. The site showcases the company's services, project capabilities, and provides a contact form for potential clients.
+This is a frontend-only Next.js project. All content is pre-rendered at build time, so the site loads quickly and behaves well for visitors discovering the business through search.
 
-**Target Users:** Homeowners and property developers looking for construction services in New Zealand
-
-**Business Purpose:** Online presence for client acquisition and service showcase
-
-**Project Type:** Company website (frontend-only)
+The business goal is straightforward — give homeowners and property developers a clean, mobile-friendly first impression of the company and a clear way to get in touch.
 
 ## Tech Stack
 
-### Frontend
-- **Next.js** — React framework with App Router for SSR and SSG
-- **React** — Component-based UI library
-- **TypeScript** — Type-safe development
-- **Tailwind CSS** — Utility-first CSS framework
-- **Framer Motion** — Animation library for scroll effects and transitions
-
-### Deployment
-- **Vercel** — Automatic deployment with CI/CD pipeline
-
-### Development Tools
-- **ESLint** — Code quality and linting
-- **PostCSS** — CSS processing
+- **Next.js** (App Router) with static generation
+- **React** and **TypeScript**
+- **Tailwind CSS** for layout and styling
+- **Framer Motion** for scroll and reveal animations
+- **Vercel** for deployment (automatic builds on push to `main`)
+- ESLint for code quality
 
 ## Key Features
 
-- **Dynamic Project Pages** — `/projects/[slug]` routes with static generation at build time
-- **Responsive Design** — Mobile-first approach with tablet and desktop breakpoints
-- **Modern Glass-Style Interface** — Responsive layouts with subtle visual effects
-- **Scroll Animations** — Intersection Observer API with Framer Motion for reveal effects
-- **SEO Optimization** — Meta tags, Open Graph protocol, and semantic HTML
-- **Contact Form** — Client inquiry form with validation
+- Dynamic `/projects/[slug]` pages, statically generated at build time.
+- Mobile-first responsive layout with tablet and desktop breakpoints.
+- Scroll-driven reveals using `IntersectionObserver` and Framer Motion.
+- Glass-style visual treatment with subtle motion.
+- Semantic HTML, meta tags, and Open Graph for SEO.
+- Contact form with client-side validation.
 
-## Architecture
+## Screenshots
 
-### Frontend Structure
-- **App Router** — Next.js 13+ file-based routing system
-- **Static Site Generation (SSG)** — All pages pre-rendered at build time
-- **Component Architecture** — Reusable React components with TypeScript interfaces
-- **Data Layer** — Centralized project data in `lib/data/projects.ts`
+![Homepage hero](screenshots/homepage-hero.jpg)
+*Homepage hero introducing the construction business.*
 
-### Routing
-- `/` — Homepage with hero, about, services, projects, and contact sections
-- `/projects/[slug]` — Dynamic project detail pages (4 pages generated at build time)
+![About and services](screenshots/about-services-section.jpg)
+*About section followed by the services overview.*
 
-### No Backend
-This is a frontend-only application. All content is statically generated at build time. No server-side API or database is used.
+![Project capabilities](screenshots/project-capabilities.jpg)
+*Project capabilities grid linking through to detail pages.*
 
 ## Project Structure
 
 ```
 ttt-construction-ltd/
 ├── app/
-│   ├── layout.tsx              # Root layout with metadata
+│   ├── layout.tsx
 │   ├── page.tsx                # Homepage
 │   └── projects/[slug]/
 │       └── page.tsx            # Dynamic project detail pages
 ├── components/
-│   ├── project-detail/         # Project page components
-│   ├── Hero.tsx                # Homepage hero section
-│   ├── About.tsx               # About section
-│   ├── Services.tsx            # Services grid
-│   ├── Projects.tsx            # Project capabilities grid
-│   ├── Contact.tsx             # Contact form
-│   ├── Navbar.tsx              # Navigation bar
-│   ├── Footer.tsx              # Footer
-│   ├── Reveal.tsx              # Scroll reveal wrapper
-│   └── SectionHeading.tsx      # Reusable heading component
-├── lib/
-│   └── data/
-│       └── projects.ts         # Project data with TypeScript interfaces
-├── public/
-│   └── images/                 # Static image assets
-├── screenshots/                # Project screenshots for README
-└── styles/
-    └── globals.css             # Global styles and Tailwind config
+│   ├── project-detail/
+│   ├── Hero.tsx
+│   ├── About.tsx
+│   ├── Services.tsx
+│   ├── Projects.tsx
+│   ├── Contact.tsx
+│   ├── Navbar.tsx
+│   ├── Footer.tsx
+│   ├── Reveal.tsx
+│   └── SectionHeading.tsx
+├── lib/data/projects.ts        # Project data with TypeScript interfaces
+├── public/images/
+├── screenshots/
+└── styles/globals.css
 ```
 
-## Installation and Setup
+## Setup
 
 ```bash
-# Clone the repository
 git clone https://github.com/zj115/ttt-construction-ltd.git
 cd ttt-construction-ltd
-
-# Install dependencies
 npm install
-
-# Run development server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the site locally.
+Visit http://localhost:3000.
 
-### Build for Production
+To build for production:
 
 ```bash
-# Create optimized production build
 npm run build
-
-# Start production server locally
 npm start
 ```
 
-### Deployment
-
-The project is configured for automatic deployment on Vercel. Every push to the `main` branch triggers a new build and deployment.
-
 ## Environment Variables
 
-**No environment variables are required for this project.**
+None required. The project is a static frontend with no backend services or external APIs.
 
-This is a static frontend application with no backend services, APIs, or database connections.
+## Project Work
 
-## Screenshots
+I built this as a frontend project for a residential construction business. The design brief was "modern but trustworthy" — not too tech-startup, not too corporate.
 
-### Homepage Hero Section
-<img src="./screenshots/about-services-section.jpg" width="100%" alt="Homepage Hero Section" />
+I set up the Next.js App Router with static generation for the project detail pages, and put the project data in a small TypeScript module so the four detail pages share a single source of truth. Animations are handled with Framer Motion through a reusable `<Reveal>` wrapper, which keeps the per-section markup clean.
 
-### About & Services Section
-<img src="./screenshots/homepage-hero.jpg" width="100%" alt="About and Services Section" />
-
-### Project Capabilities Section
-<img src="./screenshots/project-capabilities.jpg" width="100%" alt="Project Capabilities Grid" />
-
-## My Contribution
-
-I built this entire project from scratch as a commercial website for a New Zealand construction company. My work included:
-
-- **Frontend Development** — Implemented all React components using Next.js 16 App Router and TypeScript
-- **UI/UX Design** — Created a modern glass morphism design system with Tailwind CSS
-- **Dynamic Routing** — Built `/projects/[slug]` pages with static generation for 4 project types
-- **Data Architecture** — Designed a centralized data layer with TypeScript interfaces for type safety
-- **Animations** — Integrated Framer Motion for smooth scroll reveals and transitions
-- **Responsive Design** — Ensured mobile-first responsive layouts across all breakpoints
-- **SEO Optimization** — Implemented meta tags, Open Graph protocol, and semantic HTML structure
-- **Deployment** — Configured Vercel deployment with automatic CI/CD pipeline
-- **Documentation** — Wrote comprehensive README with screenshots and technical details
+Tailwind handles the layout and the glass-style surface treatment. The site is deployed on Vercel with automatic builds on push.
 
 ## Security and Privacy
 
-- ✅ No production credentials are included in this repository
-- ✅ No real customer data or business-sensitive information is exposed
-- ✅ No API keys, database credentials, or secrets in the codebase
-- ✅ `.gitignore` properly configured to exclude sensitive files
-- ✅ All screenshots use publicly available demo content
+No production credentials, API keys, or customer data are included in this repository. Screenshots use generic content that doesn't expose real client information.
 
 ## Future Improvements
 
-- Add a CMS (e.g., Sanity or Contentful) for non-technical content updates
-- Implement a backend API for the contact form with email notifications
-- Add a blog section for construction tips and company updates
-- Integrate Google Analytics for traffic monitoring
-- Add more project case studies with real construction photos
+- Add a small CMS layer (Sanity or Contentful) so the team can edit content without code changes.
+- Wire the contact form to a backend with email notifications.
+- Add a blog or news section for construction tips and company updates.
+- Integrate Google Analytics or a privacy-friendly alternative.
 
 ## License
 
-This repository is shared for portfolio and demonstration purposes only. Commercial reuse is not permitted without permission.
+*Shared for portfolio and demonstration purposes only. Commercial reuse is not permitted without permission.*
